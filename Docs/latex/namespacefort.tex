@@ -1,0 +1,353 @@
+\doxysection{fort Namespace Reference}
+\hypertarget{namespacefort}{}\label{namespacefort}\index{fort@{fort}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacefort_1_1detail}{detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classfort_1_1property__owner}{property\+\_\+owner}}
+\item 
+class \mbox{\hyperlink{classfort_1_1table}{table}}
+\item 
+class \mbox{\hyperlink{classfort_1_1table__manipulator}{table\+\_\+manipulator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacefort_a41a05e3a6bb3e0e7d89dd06005e0bb5d}{char\+\_\+table}} = \mbox{\hyperlink{classfort_1_1table}{table}}$<$ \mbox{\hyperlink{namespacefort_aa331578461d0ee79e683d9e209cfc25baa956161a69928cd130a889b88082fb6e}{table\+\_\+type\+::character}} $>$
+\item 
+using \mbox{\hyperlink{namespacefort_a508f5a472ab557708969fc946380cfc4}{utf8\+\_\+table}} = \mbox{\hyperlink{classfort_1_1table}{table}}$<$ \mbox{\hyperlink{namespacefort_aa331578461d0ee79e683d9e209cfc25ba30df7f629fcf6b940bcaef5faf2490bb}{table\+\_\+type\+::utf8}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacefort_a895f73752fc847c22853fd363a575b04}{text\+\_\+align}} \{ \mbox{\hyperlink{namespacefort_a895f73752fc847c22853fd363a575b04a811882fecd5c7618d7099ebbd39ea254}{left}} = FT\+\_\+\+ALIGNED\+\_\+\+LEFT
+, \mbox{\hyperlink{namespacefort_a895f73752fc847c22853fd363a575b04aadb115059e28d960fa8badfac5516667}{center}} = FT\+\_\+\+ALIGNED\+\_\+\+CENTER
+, \mbox{\hyperlink{namespacefort_a895f73752fc847c22853fd363a575b04a7c4f29407893c334a6cb7a87bf045c0d}{right}} = FT\+\_\+\+ALIGNED\+\_\+\+RIGHT
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacefort_a28370d69d653e7ae3cb80c61cf2469aa}{row\+\_\+type}} \{ \mbox{\hyperlink{namespacefort_a28370d69d653e7ae3cb80c61cf2469aaa9efab2399c7c560b34de477b9aa0a465}{common}} = FT\+\_\+\+ROW\+\_\+\+COMMON
+, \mbox{\hyperlink{namespacefort_a28370d69d653e7ae3cb80c61cf2469aaa099fb995346f31c749f6e40db0f395e3}{header}} = FT\+\_\+\+ROW\+\_\+\+HEADER
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4}{add\+\_\+strategy}} \{ \mbox{\hyperlink{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4a9dde360102c103867bd2f45872f1129c}{replace}} = FT\+\_\+\+STRATEGY\+\_\+\+REPLACE
+, \mbox{\hyperlink{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4ae0df5f3dfd2650ae5be9993434e2b2c0}{insert}} = FT\+\_\+\+STRATEGY\+\_\+\+INSERT
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbba}{color}} \{ \newline
+\mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaaf00b888e90cd7fe1d5c2f7b44ed4ad9b}{default\+\_\+color}} = FT\+\_\+\+COLOR\+\_\+\+DEFAULT
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa1ffd9e753c8054cc61456ac7fac1ac89}{black}} = FT\+\_\+\+COLOR\+\_\+\+BLACK
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaabda9643ac6601722a28f238714274da4}{red}} = FT\+\_\+\+COLOR\+\_\+\+RED
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa9f27410725ab8cc8854a2769c7a516b8}{green}} = FT\+\_\+\+COLOR\+\_\+\+GREEN
+, \newline
+\mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaad487dd0b55dfcacdd920ccbdaeafa351}{yellow}} = FT\+\_\+\+COLOR\+\_\+\+YELLOW
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa48d6215903dff56238e52e8891380c8f}{blue}} = FT\+\_\+\+COLOR\+\_\+\+BLUE
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa4c2a4a7078da0ac6733464eacfd00f86}{magenta}} = FT\+\_\+\+COLOR\+\_\+\+MAGENTA
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa6411532ba4971f378391776a9db629d3}{cyan}} = FT\+\_\+\+COLOR\+\_\+\+CYAN
+, \newline
+\mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa770e427f6a16eb64e2ece9585ba9d193}{light\+\_\+gray}} = FT\+\_\+\+COLOR\+\_\+\+LIGHT\+\_\+\+GRAY
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa49dba686026a18435dd23b5e83eb5cfd}{dark\+\_\+gray}} = FT\+\_\+\+COLOR\+\_\+\+DARK\+\_\+\+GRAY
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa9fec81ba3d6228b82a5bb8fe57c3da22}{light\+\_\+red}} = FT\+\_\+\+COLOR\+\_\+\+LIGHT\+\_\+\+RED
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaac10bddadd1786a8a12f96ae7db5bafb8}{light\+\_\+green}} = FT\+\_\+\+COLOR\+\_\+\+LIGHT\+\_\+\+GREEN
+, \newline
+\mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa743b7827c281254e45c305696344535b}{light\+\_\+yellow}} = FT\+\_\+\+COLOR\+\_\+\+LIGHT\+\_\+\+YELLOW
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa61a2783898a9df78bb27edc33f768e6e}{light\+\_\+blue}} = FT\+\_\+\+COLOR\+\_\+\+LIGHT\+\_\+\+BLUE
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaaa8cf5b4ddb5e196f692ec56c939b4ea7}{light\+\_\+magenta}} = FT\+\_\+\+COLOR\+\_\+\+LIGHT\+\_\+\+MAGENTA
+, \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa4eece7cf37c9db41ed9e016e471fcf2f}{light\+\_\+cyan}} = FT\+\_\+\+COLOR\+\_\+\+LIGHT\+\_\+\+CYAN
+, \newline
+\mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa49c0d1fd8de9f2b60fad8f940d3b0d45}{light\+\_\+whyte}} = FT\+\_\+\+COLOR\+\_\+\+LIGHT\+\_\+\+WHYTE
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061}{text\+\_\+style}} \{ \newline
+\mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061aebb7f4a926eea585ded212ce82818e54}{default\+\_\+style}} = FT\+\_\+\+TSTYLE\+\_\+\+DEFAULT
+, \mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061a69dcab4a73aeec2113f69b61e6263da8}{bold}} = FT\+\_\+\+TSTYLE\+\_\+\+BOLD
+, \mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061a563728df0fdd90631ac1e51258e2857d}{dim}} = FT\+\_\+\+TSTYLE\+\_\+\+DIM
+, \mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061a030c5b6d1e5715105943ac111d9671bf}{italic}} = FT\+\_\+\+TSTYLE\+\_\+\+ITALIC
+, \newline
+\mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061a53d8b12f5a04c848b57a2d303a1ded53}{underlined}} = FT\+\_\+\+TSTYLE\+\_\+\+UNDERLINED
+, \mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061a40652ee9ae143f1c1c830f01a5449ecb}{blink}} = FT\+\_\+\+TSTYLE\+\_\+\+BLINK
+, \mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061a184401f335d6b8661e04dfea47b9dcd5}{inverted}} = FT\+\_\+\+TSTYLE\+\_\+\+INVERTED
+, \mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061a662f707d5491e9bce8238a6c0be92190}{hidden}} = FT\+\_\+\+TSTYLE\+\_\+\+HIDDEN
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacefort_aa331578461d0ee79e683d9e209cfc25b}{table\+\_\+type}} \{ \mbox{\hyperlink{namespacefort_aa331578461d0ee79e683d9e209cfc25baa956161a69928cd130a889b88082fb6e}{character}}
+, \mbox{\hyperlink{namespacefort_aa331578461d0ee79e683d9e209cfc25ba30df7f629fcf6b940bcaef5faf2490bb}{utf8}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacefort_a27a2b1ed051093b5132048bcb9454465}{is\+\_\+stream\+\_\+manipulator}} () noexcept
+\item 
+bool \mbox{\hyperlink{namespacefort_ad609b3a839d0c845e58d315085f8fade}{set\+\_\+default\+\_\+border\+\_\+style}} (struct \mbox{\hyperlink{structft__border__style}{ft\+\_\+border\+\_\+style}} \texorpdfstring{$\ast$}{*}style)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classfort_1_1table__manipulator}{table\+\_\+manipulator}} \mbox{\hyperlink{namespacefort_a6b60404c249df2f612d990c603d49517}{header}} (0)
+\item 
+const \mbox{\hyperlink{classfort_1_1table__manipulator}{table\+\_\+manipulator}} \mbox{\hyperlink{namespacefort_aee4e27c8d266e9b1be499e052fbc6c53}{endr}} (1)
+\item 
+const \mbox{\hyperlink{classfort_1_1table__manipulator}{table\+\_\+manipulator}} \mbox{\hyperlink{namespacefort_af61eccb3d2f66403d238b94e59dd7e4a}{separator}} (2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespacefort_a41a05e3a6bb3e0e7d89dd06005e0bb5d}\label{namespacefort_a41a05e3a6bb3e0e7d89dd06005e0bb5d} 
+\index{fort@{fort}!char\_table@{char\_table}}
+\index{char\_table@{char\_table}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{char\_table}{char\_table}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacefort_a41a05e3a6bb3e0e7d89dd06005e0bb5d}{fort\+::char\+\_\+table}} = typedef \mbox{\hyperlink{classfort_1_1table}{table}}$<$\mbox{\hyperlink{namespacefort_aa331578461d0ee79e683d9e209cfc25baa956161a69928cd130a889b88082fb6e}{table\+\_\+type\+::character}}$>$}
+
+Formatted table containing common char content.
+
+Content of the table is treated as a string where each byte represesents a character. Should work for ascii characters. In case of usage of different international symbols it is recommended to use {\ttfamily \doxylink{namespacefort_a508f5a472ab557708969fc946380cfc4}{utf8\+\_\+table}}. \Hypertarget{namespacefort_a508f5a472ab557708969fc946380cfc4}\label{namespacefort_a508f5a472ab557708969fc946380cfc4} 
+\index{fort@{fort}!utf8\_table@{utf8\_table}}
+\index{utf8\_table@{utf8\_table}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{utf8\_table}{utf8\_table}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacefort_a508f5a472ab557708969fc946380cfc4}{fort\+::utf8\+\_\+table}} = typedef \mbox{\hyperlink{classfort_1_1table}{table}}$<$\mbox{\hyperlink{namespacefort_aa331578461d0ee79e683d9e209cfc25ba30df7f629fcf6b940bcaef5faf2490bb}{table\+\_\+type\+::utf8}}$>$}
+
+Formatted table containing utf-\/8 content. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4}\label{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4} 
+\index{fort@{fort}!add\_strategy@{add\_strategy}}
+\index{add\_strategy@{add\_strategy}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{add\_strategy}{add\_strategy}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4}{fort\+::add\+\_\+strategy}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Adding strategy.
+
+Determines what happens with old content if current cell is not empty after adding data to it. Default strategy is \textquotesingle{}replace\textquotesingle{}. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{replace@{replace}!fort@{fort}}\index{fort@{fort}!replace@{replace}}}\Hypertarget{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4a9dde360102c103867bd2f45872f1129c}\label{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4a9dde360102c103867bd2f45872f1129c} 
+replace&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{insert@{insert}!fort@{fort}}\index{fort@{fort}!insert@{insert}}}\Hypertarget{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4ae0df5f3dfd2650ae5be9993434e2b2c0}\label{namespacefort_a90d7e4b53ec42f4eddd9e63eb02abca4ae0df5f3dfd2650ae5be9993434e2b2c0} 
+insert&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbba}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbba} 
+\index{fort@{fort}!color@{color}}
+\index{color@{color}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacefort_a3cac6d8954776afa43e4d389ff70fbba}{fort\+::color}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Colors. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{default\_color@{default\_color}!fort@{fort}}\index{fort@{fort}!default\_color@{default\_color}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaaf00b888e90cd7fe1d5c2f7b44ed4ad9b}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaaf00b888e90cd7fe1d5c2f7b44ed4ad9b} 
+default\+\_\+color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{black@{black}!fort@{fort}}\index{fort@{fort}!black@{black}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa1ffd9e753c8054cc61456ac7fac1ac89}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa1ffd9e753c8054cc61456ac7fac1ac89} 
+black&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{red@{red}!fort@{fort}}\index{fort@{fort}!red@{red}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaabda9643ac6601722a28f238714274da4}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaabda9643ac6601722a28f238714274da4} 
+red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{green@{green}!fort@{fort}}\index{fort@{fort}!green@{green}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa9f27410725ab8cc8854a2769c7a516b8}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa9f27410725ab8cc8854a2769c7a516b8} 
+green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{yellow@{yellow}!fort@{fort}}\index{fort@{fort}!yellow@{yellow}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaad487dd0b55dfcacdd920ccbdaeafa351}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaad487dd0b55dfcacdd920ccbdaeafa351} 
+yellow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{blue@{blue}!fort@{fort}}\index{fort@{fort}!blue@{blue}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa48d6215903dff56238e52e8891380c8f}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa48d6215903dff56238e52e8891380c8f} 
+blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{magenta@{magenta}!fort@{fort}}\index{fort@{fort}!magenta@{magenta}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa4c2a4a7078da0ac6733464eacfd00f86}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa4c2a4a7078da0ac6733464eacfd00f86} 
+magenta&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cyan@{cyan}!fort@{fort}}\index{fort@{fort}!cyan@{cyan}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa6411532ba4971f378391776a9db629d3}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa6411532ba4971f378391776a9db629d3} 
+cyan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{light\_gray@{light\_gray}!fort@{fort}}\index{fort@{fort}!light\_gray@{light\_gray}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa770e427f6a16eb64e2ece9585ba9d193}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa770e427f6a16eb64e2ece9585ba9d193} 
+light\+\_\+gray&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dark\_gray@{dark\_gray}!fort@{fort}}\index{fort@{fort}!dark\_gray@{dark\_gray}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa49dba686026a18435dd23b5e83eb5cfd}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa49dba686026a18435dd23b5e83eb5cfd} 
+dark\+\_\+gray&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{light\_red@{light\_red}!fort@{fort}}\index{fort@{fort}!light\_red@{light\_red}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa9fec81ba3d6228b82a5bb8fe57c3da22}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa9fec81ba3d6228b82a5bb8fe57c3da22} 
+light\+\_\+red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{light\_green@{light\_green}!fort@{fort}}\index{fort@{fort}!light\_green@{light\_green}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaac10bddadd1786a8a12f96ae7db5bafb8}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaac10bddadd1786a8a12f96ae7db5bafb8} 
+light\+\_\+green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{light\_yellow@{light\_yellow}!fort@{fort}}\index{fort@{fort}!light\_yellow@{light\_yellow}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa743b7827c281254e45c305696344535b}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa743b7827c281254e45c305696344535b} 
+light\+\_\+yellow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{light\_blue@{light\_blue}!fort@{fort}}\index{fort@{fort}!light\_blue@{light\_blue}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa61a2783898a9df78bb27edc33f768e6e}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa61a2783898a9df78bb27edc33f768e6e} 
+light\+\_\+blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{light\_magenta@{light\_magenta}!fort@{fort}}\index{fort@{fort}!light\_magenta@{light\_magenta}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaaa8cf5b4ddb5e196f692ec56c939b4ea7}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaaa8cf5b4ddb5e196f692ec56c939b4ea7} 
+light\+\_\+magenta&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{light\_cyan@{light\_cyan}!fort@{fort}}\index{fort@{fort}!light\_cyan@{light\_cyan}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa4eece7cf37c9db41ed9e016e471fcf2f}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa4eece7cf37c9db41ed9e016e471fcf2f} 
+light\+\_\+cyan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{light\_whyte@{light\_whyte}!fort@{fort}}\index{fort@{fort}!light\_whyte@{light\_whyte}}}\Hypertarget{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa49c0d1fd8de9f2b60fad8f940d3b0d45}\label{namespacefort_a3cac6d8954776afa43e4d389ff70fbbaa49c0d1fd8de9f2b60fad8f940d3b0d45} 
+light\+\_\+whyte&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespacefort_a28370d69d653e7ae3cb80c61cf2469aa}\label{namespacefort_a28370d69d653e7ae3cb80c61cf2469aa} 
+\index{fort@{fort}!row\_type@{row\_type}}
+\index{row\_type@{row\_type}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{row\_type}{row\_type}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacefort_a28370d69d653e7ae3cb80c61cf2469aa}{fort\+::row\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Type of table row. Determines appearance of row. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{common@{common}!fort@{fort}}\index{fort@{fort}!common@{common}}}\Hypertarget{namespacefort_a28370d69d653e7ae3cb80c61cf2469aaa9efab2399c7c560b34de477b9aa0a465}\label{namespacefort_a28370d69d653e7ae3cb80c61cf2469aaa9efab2399c7c560b34de477b9aa0a465} 
+common&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{header@{header}!fort@{fort}}\index{fort@{fort}!header@{header}}}\Hypertarget{namespacefort_a28370d69d653e7ae3cb80c61cf2469aaa099fb995346f31c749f6e40db0f395e3}\label{namespacefort_a28370d69d653e7ae3cb80c61cf2469aaa099fb995346f31c749f6e40db0f395e3} 
+header&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespacefort_aa331578461d0ee79e683d9e209cfc25b}\label{namespacefort_aa331578461d0ee79e683d9e209cfc25b} 
+\index{fort@{fort}!table\_type@{table\_type}}
+\index{table\_type@{table\_type}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{table\_type}{table\_type}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacefort_aa331578461d0ee79e683d9e209cfc25b}{fort\+::table\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{character@{character}!fort@{fort}}\index{fort@{fort}!character@{character}}}\Hypertarget{namespacefort_aa331578461d0ee79e683d9e209cfc25baa956161a69928cd130a889b88082fb6e}\label{namespacefort_aa331578461d0ee79e683d9e209cfc25baa956161a69928cd130a889b88082fb6e} 
+character&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{utf8@{utf8}!fort@{fort}}\index{fort@{fort}!utf8@{utf8}}}\Hypertarget{namespacefort_aa331578461d0ee79e683d9e209cfc25ba30df7f629fcf6b940bcaef5faf2490bb}\label{namespacefort_aa331578461d0ee79e683d9e209cfc25ba30df7f629fcf6b940bcaef5faf2490bb} 
+utf8&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespacefort_a895f73752fc847c22853fd363a575b04}\label{namespacefort_a895f73752fc847c22853fd363a575b04} 
+\index{fort@{fort}!text\_align@{text\_align}}
+\index{text\_align@{text\_align}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{text\_align}{text\_align}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacefort_a895f73752fc847c22853fd363a575b04}{fort\+::text\+\_\+align}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Alignment of cell content. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{left@{left}!fort@{fort}}\index{fort@{fort}!left@{left}}}\Hypertarget{namespacefort_a895f73752fc847c22853fd363a575b04a811882fecd5c7618d7099ebbd39ea254}\label{namespacefort_a895f73752fc847c22853fd363a575b04a811882fecd5c7618d7099ebbd39ea254} 
+left&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{center@{center}!fort@{fort}}\index{fort@{fort}!center@{center}}}\Hypertarget{namespacefort_a895f73752fc847c22853fd363a575b04aadb115059e28d960fa8badfac5516667}\label{namespacefort_a895f73752fc847c22853fd363a575b04aadb115059e28d960fa8badfac5516667} 
+center&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{right@{right}!fort@{fort}}\index{fort@{fort}!right@{right}}}\Hypertarget{namespacefort_a895f73752fc847c22853fd363a575b04a7c4f29407893c334a6cb7a87bf045c0d}\label{namespacefort_a895f73752fc847c22853fd363a575b04a7c4f29407893c334a6cb7a87bf045c0d} 
+right&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061} 
+\index{fort@{fort}!text\_style@{text\_style}}
+\index{text\_style@{text\_style}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{text\_style}{text\_style}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacefort_aca558b21bbb52c9c28de9811bec32061}{fort\+::text\+\_\+style}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Text styles. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{default\_style@{default\_style}!fort@{fort}}\index{fort@{fort}!default\_style@{default\_style}}}\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061aebb7f4a926eea585ded212ce82818e54}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061aebb7f4a926eea585ded212ce82818e54} 
+default\+\_\+style&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bold@{bold}!fort@{fort}}\index{fort@{fort}!bold@{bold}}}\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061a69dcab4a73aeec2113f69b61e6263da8}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061a69dcab4a73aeec2113f69b61e6263da8} 
+bold&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dim@{dim}!fort@{fort}}\index{fort@{fort}!dim@{dim}}}\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061a563728df0fdd90631ac1e51258e2857d}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061a563728df0fdd90631ac1e51258e2857d} 
+dim&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{italic@{italic}!fort@{fort}}\index{fort@{fort}!italic@{italic}}}\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061a030c5b6d1e5715105943ac111d9671bf}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061a030c5b6d1e5715105943ac111d9671bf} 
+italic&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{underlined@{underlined}!fort@{fort}}\index{fort@{fort}!underlined@{underlined}}}\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061a53d8b12f5a04c848b57a2d303a1ded53}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061a53d8b12f5a04c848b57a2d303a1ded53} 
+underlined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{blink@{blink}!fort@{fort}}\index{fort@{fort}!blink@{blink}}}\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061a40652ee9ae143f1c1c830f01a5449ecb}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061a40652ee9ae143f1c1c830f01a5449ecb} 
+blink&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{inverted@{inverted}!fort@{fort}}\index{fort@{fort}!inverted@{inverted}}}\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061a184401f335d6b8661e04dfea47b9dcd5}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061a184401f335d6b8661e04dfea47b9dcd5} 
+inverted&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hidden@{hidden}!fort@{fort}}\index{fort@{fort}!hidden@{hidden}}}\Hypertarget{namespacefort_aca558b21bbb52c9c28de9811bec32061a662f707d5491e9bce8238a6c0be92190}\label{namespacefort_aca558b21bbb52c9c28de9811bec32061a662f707d5491e9bce8238a6c0be92190} 
+hidden&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacefort_a27a2b1ed051093b5132048bcb9454465}\label{namespacefort_a27a2b1ed051093b5132048bcb9454465} 
+\index{fort@{fort}!is\_stream\_manipulator@{is\_stream\_manipulator}}
+\index{is\_stream\_manipulator@{is\_stream\_manipulator}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{is\_stream\_manipulator()}{is\_stream\_manipulator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool fort\+::is\+\_\+stream\+\_\+manipulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+Utility function that is used internally by the library to check if argument passed to operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} is a manipulator. In case default behaviour is not enough write custom specialization of this function. \Hypertarget{namespacefort_ad609b3a839d0c845e58d315085f8fade}\label{namespacefort_ad609b3a839d0c845e58d315085f8fade} 
+\index{fort@{fort}!set\_default\_border\_style@{set\_default\_border\_style}}
+\index{set\_default\_border\_style@{set\_default\_border\_style}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{set\_default\_border\_style()}{set\_default\_border\_style()}}
+{\footnotesize\ttfamily bool fort\+::set\+\_\+default\+\_\+border\+\_\+style (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structft__border__style}{ft\+\_\+border\+\_\+style}} \texorpdfstring{$\ast$}{*}}]{style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set default border style for all new formatted tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em style} & Pointer to border style. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item True\+: Success; table border style was changed.
+\item False\+: Error 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacefort_aee4e27c8d266e9b1be499e052fbc6c53}\label{namespacefort_aee4e27c8d266e9b1be499e052fbc6c53} 
+\index{fort@{fort}!endr@{endr}}
+\index{endr@{endr}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{endr}{endr}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfort_1_1table__manipulator}{table\+\_\+manipulator}} fort\+::endr(1) (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+Table manipulator to move current cell to the first cell of the next row. \Hypertarget{namespacefort_a6b60404c249df2f612d990c603d49517}\label{namespacefort_a6b60404c249df2f612d990c603d49517} 
+\index{fort@{fort}!header@{header}}
+\index{header@{header}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfort_1_1table__manipulator}{table\+\_\+manipulator}} fort\+::header(0) (\begin{DoxyParamCaption}\item[{0}]{ }\end{DoxyParamCaption})}
+
+Table manipulator to set current row as a header. \Hypertarget{namespacefort_af61eccb3d2f66403d238b94e59dd7e4a}\label{namespacefort_af61eccb3d2f66403d238b94e59dd7e4a} 
+\index{fort@{fort}!separator@{separator}}
+\index{separator@{separator}!fort@{fort}}
+\doxysubsubsection{\texorpdfstring{separator}{separator}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfort_1_1table__manipulator}{table\+\_\+manipulator}} fort\+::separator(2) (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+Table manipulator to add separator to the table. 

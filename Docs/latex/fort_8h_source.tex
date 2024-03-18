@@ -1,0 +1,468 @@
+\doxysection{fort.\+h}
+\hypertarget{fort_8h_source}{}\label{fort_8h_source}\mbox{\hyperlink{fort_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{libfort}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{MIT\ License}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{Copyright\ (c)\ 2017\ -\/\ 2020\ Seleznev\ Anton}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{Permission\ is\ hereby\ granted,\ free\ of\ charge,\ to\ any\ person\ obtaining\ a\ copy}}
+\DoxyCodeLine{00009\ \textcolor{comment}{of\ this\ software\ and\ associated\ documentation\ files\ (the\ "{}Software"{}),\ to\ deal}}
+\DoxyCodeLine{00010\ \textcolor{comment}{in\ the\ Software\ without\ restriction,\ including\ without\ limitation\ the\ rights}}
+\DoxyCodeLine{00011\ \textcolor{comment}{to\ use,\ copy,\ modify,\ merge,\ publish,\ distribute,\ sublicense,\ and/or\ sell}}
+\DoxyCodeLine{00012\ \textcolor{comment}{copies\ of\ the\ Software,\ and\ to\ permit\ persons\ to\ whom\ the\ Software\ is}}
+\DoxyCodeLine{00013\ \textcolor{comment}{furnished\ to\ do\ so,\ subject\ to\ the\ following\ conditions:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{}}
+\DoxyCodeLine{00015\ \textcolor{comment}{The\ above\ copyright\ notice\ and\ this\ permission\ notice\ shall\ be\ included\ in\ all}}
+\DoxyCodeLine{00016\ \textcolor{comment}{copies\ or\ substantial\ portions\ of\ the\ Software.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{},\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ EXPRESS\ OR}}
+\DoxyCodeLine{00019\ \textcolor{comment}{IMPLIED,\ INCLUDING\ BUT\ NOT\ LIMITED\ TO\ THE\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00020\ \textcolor{comment}{FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ AND\ NONINFRINGEMENT.\ IN\ NO\ EVENT\ SHALL\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{AUTHORS\ OR\ COPYRIGHT\ HOLDERS\ BE\ LIABLE\ FOR\ ANY\ CLAIM,\ DAMAGES\ OR\ OTHER}}
+\DoxyCodeLine{00022\ \textcolor{comment}{LIABILITY,\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ TORT\ OR\ OTHERWISE,\ ARISING\ FROM,}}
+\DoxyCodeLine{00023\ \textcolor{comment}{OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER\ DEALINGS\ IN\ THE}}
+\DoxyCodeLine{00024\ \textcolor{comment}{SOFTWARE.}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#ifndef\ LIBFORT\_H}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ LIBFORT\_H}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <limits.h>}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VERSION}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ LIBFORT\_MAJOR\_VERSION\ 0}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ LIBFORT\_MINOR\_VERSION\ 4}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ LIBFORT\_REVISION\ 2}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ LIBFORT\_VERSION\_STR\ "{}0.4.2"{}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Configuration}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#if\ !defined(FT\_CONGIG\_DISABLE\_WCHAR)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ FT\_HAVE\_WCHAR}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#if\ !defined(FT\_CONGIG\_DISABLE\_UTF8)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ FT\_HAVE\_UTF8}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RETURN\ CODES}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ FT\_SUCCESS\ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ FT\_MEMORY\_ERROR\ \ -\/1}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ FT\_EINVAL\ \ \ \ \ \ \ \ -\/2}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ FT\_INTERN\_ERROR\ \ -\/3}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ FT\_GEN\_ERROR\ \ \ \ \ -\/4}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ FT\_IS\_SUCCESS(arg)\ ((arg)\ >=\ 0)}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ FT\_IS\_ERROR(arg)\ ((arg)\ <\ 0)}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00121\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Determine\ compiler}}
+\DoxyCodeLine{00122\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#if\ defined(\_\_clang\_\_)}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ FT\_CLANG\_COMPILER}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#elif\ defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ FT\_GCC\_COMPILER}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ FT\_MICROSOFT\_COMPILER}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ FT\_UNDEFINED\_COMPILER}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00136\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Declare\ inline}}
+\DoxyCodeLine{00137\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ FT\_INLINE\ inline}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ FT\_INLINE\ \_\_inline}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ if\ defined(\_\_cplusplus)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00147\ \textcolor{comment}{\ *\ \ \ \ C++\ needs\ to\ know\ that\ types\ and\ declarations\ are\ C,\ not\ C++.}}
+\DoxyCodeLine{00148\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#\ define\ FT\_BEGIN\_DECLS\ extern\ "{}C"{}}\ \{}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#\ define\ FT\_END\_DECLS\ \}}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#\ define\ FT\_BEGIN\_DECLS}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#\ define\ FT\_END\_DECLS}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00160\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Helper\ macros}}
+\DoxyCodeLine{00161\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ FT\_STR\_2\_CAT\_(arg1,\ arg2)\ \(\backslash\)}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\ \ \ \ arg1\#\#arg2}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ FT\_STR\_2\_CAT(arg1,\ arg2)\ \(\backslash\)}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\ \ \ \ FT\_STR\_2\_CAT\_(arg1,\ arg2)}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00171\ \textcolor{keyword}{static}\ FT\_INLINE\ \textcolor{keywordtype}{int}\ ft\_check\_if\_string\_helper(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str)}
+\DoxyCodeLine{00172\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ (void)str;}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00175\ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{static}\ FT\_INLINE\ \textcolor{keywordtype}{int}\ ft\_check\_if\_wstring\_helper(\textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *str)}
+\DoxyCodeLine{00181\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ (void)str;}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00184\ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ FT\_NARGS\_IMPL\_(x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,N,...)\ N}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ FT\_EXPAND\_(x)\ x}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ FT\_PP\_NARG\_(...)\ \(\backslash\)}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\ \ \ \ FT\_EXPAND\_(FT\_NARGS\_IMPL\_(\_\_VA\_ARGS\_\_,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0))}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_32(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_31(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_31(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_30(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_30(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_29(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_29(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_28(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_28(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_27(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_27(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_26(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_26(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_25(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_25(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_24(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_24(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_23(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_23(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_22(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_22(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_21(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_21(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_20(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_20(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_19(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_19(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_18(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_18(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_17(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_17(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_16(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_16(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_15(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_15(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_14(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_14(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_13(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_13(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_12(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_12(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_11(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_11(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_10(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_10(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_9(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_9(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_8(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_8(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_7(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_7(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_6(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_6(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_5(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_5(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_4(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_4(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_3(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_3(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_2(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_2(checker,arg,...)\ (checker(arg),FT\_EXPAND\_(FT\_CHECK\_IF\_STR\_1(checker,\_\_VA\_ARGS\_\_)))}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_STR\_1(checker,arg)\ (checker(arg))}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_ARGS\_ARE\_STRINGS\_\_(checker,func,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\ \ \ \ FT\_EXPAND\_(func(checker,\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_ARGS\_ARE\_STRINGS\_(checker,basis,\ n,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\ \ \ \ FT\_CHECK\_IF\_ARGS\_ARE\_STRINGS\_\_(checker,FT\_STR\_2\_CAT\_(basis,\ n),\ \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ FT\_CHECK\_IF\_ARGS\_ARE\_STRINGS(...)\ \(\backslash\)}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\ \ \ \ FT\_CHECK\_IF\_ARGS\_ARE\_STRINGS\_(ft\_check\_if\_string\_helper,FT\_CHECK\_IF\_STR\_,FT\_PP\_NARG\_(\_\_VA\_ARGS\_\_),\ \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\#ifdef\ FT\_HAVE\_WCHAR}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ CHECK\_IF\_ARGS\_ARE\_WSTRINGS(...)\ \(\backslash\)}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\ \ \ \ FT\_CHECK\_IF\_ARGS\_ARE\_STRINGS\_(ft\_check\_if\_wstring\_helper,FT\_CHECK\_IF\_STR\_,FT\_PP\_NARG\_(\_\_VA\_ARGS\_\_),\ \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00241\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00242\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Attribute\ format\ for\ argument\ checking}}
+\DoxyCodeLine{00243\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#if\ defined(FT\_CLANG\_COMPILER)\ ||\ defined(FT\_GCC\_COMPILER)}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ FT\_PRINTF\_ATTRIBUTE\_FORMAT(string\_index,\ first\_to\_check)\ \(\backslash\)}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\ \ \ \ \_\_attribute\_\_\ ((format\ (printf,\ string\_index,\ first\_to\_check)))}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ FT\_PRINTF\_ATTRIBUTE\_FORMAT(string\_index,\ first\_to\_check)}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ defined(FT\_CLANG\_COMPILER)\ ||\ defined(FT\_GCC\_COMPILER)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00254\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ libfort\ API}}
+\DoxyCodeLine{00255\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ FT\_BEGIN\_DECLS}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00262\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__table}{ft\_table}};}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00270\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__table}{ft\_table}}\ \mbox{\hyperlink{structft__table}{ft\_table\_t}};}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00278\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *\mbox{\hyperlink{fort_8h_a39066bbe359e408ad6d1bb360aa0cf55}{ft\_create\_table}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00290\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fort_8h_ad8cb9ed46da7455f8b6baed42a4a1d31}{ft\_destroy\_table}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00301\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *\mbox{\hyperlink{fort_8h_a3dc4461b763ca66b2e2699a61ee99df8}{ft\_copy\_table}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00315\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a35af71857b08488797170d7b2a15054a}{ft\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00325\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{fort_8h_a71a30e02111b90af7babd37d13f3e4ee}{ft\_cur\_row}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00335\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{fort_8h_a4f3f1b331ee3637e3c8345ecb1b4ebd6}{ft\_cur\_col}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00350\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fort_8h_a6dffc742cbce46e492cd3298de467b16}{ft\_set\_cur\_cell}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ row,\ \textcolor{keywordtype}{size\_t}\ col);}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00361\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a6791222986d387c26d905691c30e095b}{ft\_is\_empty}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00371\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{fort_8h_aa7e5d0d485d6c519198a5fe9eb706eba}{ft\_row\_count}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00372\ }
+\DoxyCodeLine{00393\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a53eb304387cf4e99f0198f780bc75dc8}{ft\_erase\_range}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ top\_left\_row,\ \textcolor{keywordtype}{size\_t}\ top\_left\_col,}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ bottom\_right\_row,\ \textcolor{keywordtype}{size\_t}\ bottom\_right\_col);}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \textcolor{preprocessor}{\#if\ defined(FT\_CLANG\_COMPILER)\ ||\ defined(FT\_GCC\_COMPILER)}}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00424\ \textcolor{keywordtype}{int}\ ft\_printf(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fmt,\ ...)\ \mbox{\hyperlink{fort_8h_a2c09d90642d39a222d6e4f723e2a93bd}{FT\_PRINTF\_ATTRIBUTE\_FORMAT}}(2,\ 3);}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00451\ \textcolor{keywordtype}{int}\ ft\_printf\_ln(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ const\ \textcolor{keywordtype}{char}\ *fmt,\ ...)\ \mbox{\hyperlink{fort_8h_a2c09d90642d39a222d6e4f723e2a93bd}{FT\_PRINTF\_ATTRIBUTE\_FORMAT}}(2,\ 3);}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00459\ \textcolor{keywordtype}{int}\ ft\_printf\_impl(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fmt,\ ...)\ \mbox{\hyperlink{fort_8h_a2c09d90642d39a222d6e4f723e2a93bd}{FT\_PRINTF\_ATTRIBUTE\_FORMAT}}(2,\ 3);}
+\DoxyCodeLine{00460\ \textcolor{keywordtype}{int}\ ft\_printf\_ln\_impl(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ const\ \textcolor{keywordtype}{char}\ *fmt,\ ...)\ \mbox{\hyperlink{fort_8h_a2c09d90642d39a222d6e4f723e2a93bd}{FT\_PRINTF\_ATTRIBUTE\_FORMAT}}(2,\ 3);}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \textcolor{preprocessor}{\#define\ ft\_printf(table,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00463\ \textcolor{preprocessor}{\ \ \ \ ((\ 0\ ?\ fprintf(stderr,\ \_\_VA\_ARGS\_\_)\ :\ 1),\ ft\_printf\_impl(table,\ \_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{00464\ \textcolor{preprocessor}{\#define\ ft\_printf\_ln(table,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00465\ \textcolor{preprocessor}{\ \ \ \ ((\ 0\ ?\ fprintf(stderr,\ \_\_VA\_ARGS\_\_)\ :\ 1),\ ft\_printf\_ln\_impl(table,\ \_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00470\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00471\ }
+\DoxyCodeLine{00479\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fort_8h_a08dbade99a0cfc34c549f7ee29a60fe4}{ft\_set\_default\_printf\_field\_separator}}(\textcolor{keywordtype}{char}\ separator);}
+\DoxyCodeLine{00480\ }
+\DoxyCodeLine{00481\ }
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\#define\ ft\_write(table,\ ...)\(\backslash\)}}
+\DoxyCodeLine{00497\ \textcolor{preprocessor}{\ \ \ \ (0\ ?\ FT\_CHECK\_IF\_ARGS\_ARE\_STRINGS(\_\_VA\_ARGS\_\_)\ :\ ft\_nwrite(table,\ FT\_PP\_NARG\_(\_\_VA\_ARGS\_\_),\ \_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00514\ \textcolor{preprocessor}{\#define\ ft\_write\_ln(table,\ ...)\(\backslash\)}}
+\DoxyCodeLine{00515\ \textcolor{preprocessor}{\ \ \ \ (0\ ?\ FT\_CHECK\_IF\_ARGS\_ARE\_STRINGS(\_\_VA\_ARGS\_\_)\ :\ ft\_nwrite\_ln(table,\ FT\_PP\_NARG\_(\_\_VA\_ARGS\_\_),\ \_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{00516\ }
+\DoxyCodeLine{00540\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a69052e887e05d6dc3a0891550127619b}{ft\_nwrite}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ count,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cell\_content,\ ...);}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00566\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a09342b73950f97c0e73bbed2df40b48a}{ft\_nwrite\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ count,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cell\_content,\ ...);}
+\DoxyCodeLine{00567\ }
+\DoxyCodeLine{00568\ }
+\DoxyCodeLine{00569\ }
+\DoxyCodeLine{00586\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a52e0e57e1ead19ce324f76a2eba877fc}{ft\_row\_write}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ cols,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *row\_cells[]);}
+\DoxyCodeLine{00587\ }
+\DoxyCodeLine{00605\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a6df5c45d231c9dc0cb1af875164bafb9}{ft\_row\_write\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ cols,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *row\_cells[]);}
+\DoxyCodeLine{00606\ }
+\DoxyCodeLine{00607\ }
+\DoxyCodeLine{00625\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_ac026a41e784483319aa4c7c89a9dfe06}{ft\_table\_write}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structft__table_a8219dd3504d84760616003a3a4fef88e}{rows}},\ \textcolor{keywordtype}{size\_t}\ cols,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *table\_cells[]);}
+\DoxyCodeLine{00626\ }
+\DoxyCodeLine{00645\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_ad9219b581d29cb079847b0bfd6911271}{ft\_table\_write\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structft__table_a8219dd3504d84760616003a3a4fef88e}{rows}},\ \textcolor{keywordtype}{size\_t}\ cols,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *table\_cells[]);}
+\DoxyCodeLine{00646\ }
+\DoxyCodeLine{00647\ }
+\DoxyCodeLine{00657\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a22fc0b6196d1a9a398785e23673eeeb0}{ft\_add\_separator}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00658\ }
+\DoxyCodeLine{00659\ }
+\DoxyCodeLine{00677\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{fort_8h_aa80a0ba53be3e32a69b9b98478821354}{ft\_to\_string}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{00678\ }
+\DoxyCodeLine{00679\ }
+\DoxyCodeLine{00680\ }
+\DoxyCodeLine{00681\ }
+\DoxyCodeLine{00682\ }
+\DoxyCodeLine{00683\ }
+\DoxyCodeLine{00684\ }
+\DoxyCodeLine{00688\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__chars}{ft\_border\_chars}}\ \{}
+\DoxyCodeLine{00689\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structft__border__chars_a9f7387898911a068b05ba35c8fcdbc4c}{top\_border\_ch}};}
+\DoxyCodeLine{00690\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structft__border__chars_a12d0176ee01e79da53a900bd532cab77}{separator\_ch}};}
+\DoxyCodeLine{00691\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structft__border__chars_a34679517e199cd4a8a23f95a473f3c68}{bottom\_border\_ch}};}
+\DoxyCodeLine{00692\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structft__border__chars_ad9359ff95b64fe8941eba9c0b33bedcb}{side\_border\_ch}};}
+\DoxyCodeLine{00693\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structft__border__chars_a75ca506f5abb4be80c9071e0597d710c}{out\_intersect\_ch}};}
+\DoxyCodeLine{00694\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structft__border__chars_ab6c7ec8feb16b52d7e39e185a060caf6}{in\_intersect\_ch}};}
+\DoxyCodeLine{00695\ \};}
+\DoxyCodeLine{00696\ }
+\DoxyCodeLine{00700\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ \{}
+\DoxyCodeLine{00701\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__chars}{ft\_border\_chars}}\ \mbox{\hyperlink{structft__border__style_a26e04085ff0f546572318321ae38a751}{border\_chs}};}
+\DoxyCodeLine{00702\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__chars}{ft\_border\_chars}}\ \mbox{\hyperlink{structft__border__style_a2a05c8f0239e1de6bf517ad366509fd7}{header\_border\_chs}};}
+\DoxyCodeLine{00703\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structft__border__style_a32a15b8c310c22fc8fb93e2739630411}{hor\_separator\_char}};}
+\DoxyCodeLine{00704\ \};}
+\DoxyCodeLine{00705\ }
+\DoxyCodeLine{00716\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_a4566853be8c0cdf91ba9c3f50eb426d4}{FT\_BASIC\_STYLE}};}
+\DoxyCodeLine{00717\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_ab3ed5c4f1c4f7ca26b52b668fd4717f9}{FT\_BASIC2\_STYLE}};}
+\DoxyCodeLine{00718\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_a7581c1fec7b7c2b88f93e3445c62424d}{FT\_SIMPLE\_STYLE}};}
+\DoxyCodeLine{00719\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_add469a34d262e6368adaa636d1cf76b7}{FT\_PLAIN\_STYLE}};}
+\DoxyCodeLine{00720\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_a148f3f2c872531fdeca8e4ace60eb258}{FT\_DOT\_STYLE}};}
+\DoxyCodeLine{00721\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_aa8916e07fa9a8d1f24c1e1d1e6b68838}{FT\_EMPTY\_STYLE}};}
+\DoxyCodeLine{00722\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_a357302cc732e53c1c7049842fc0fc3c7}{FT\_EMPTY2\_STYLE}};}
+\DoxyCodeLine{00723\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_ae4723d497ac2e6980b43ac7732e21f2d}{FT\_SOLID\_STYLE}};}
+\DoxyCodeLine{00724\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_aedcc877521b55c87758949920ef0ee96}{FT\_SOLID\_ROUND\_STYLE}};}
+\DoxyCodeLine{00725\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_a91de4cab0e239a201fa2a7dc961b2fdc}{FT\_NICE\_STYLE}};}
+\DoxyCodeLine{00726\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_ad0e15260ea4a4c66f0bfa2c82b889107}{FT\_DOUBLE\_STYLE}};}
+\DoxyCodeLine{00727\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_a23314491db1204b8654f8cd610692260}{FT\_DOUBLE2\_STYLE}};}
+\DoxyCodeLine{00728\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_af392ad3ae759382d95921e1efb652744}{FT\_BOLD\_STYLE}};}
+\DoxyCodeLine{00729\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_a7b82fd38c92a289fc641d3666684bcd4}{FT\_BOLD2\_STYLE}};}
+\DoxyCodeLine{00730\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *\textcolor{keyword}{const}\ \mbox{\hyperlink{fort_8h_aef91486de193b4dfe511a992f9b02bb9}{FT\_FRAME\_STYLE}};}
+\DoxyCodeLine{00744\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_addb2484d7bc2a271be60cf743ae8eaeb}{ft\_set\_default\_border\_style}}(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *style);}
+\DoxyCodeLine{00745\ }
+\DoxyCodeLine{00757\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_aaa966b7da0ee2e2d2a93dc6a5e1ef81b}{ft\_set\_border\_style}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structft__border__style}{ft\_border\_style}}\ *style);}
+\DoxyCodeLine{00758\ }
+\DoxyCodeLine{00759\ }
+\DoxyCodeLine{00760\ }
+\DoxyCodeLine{00765\ \textcolor{preprocessor}{\#define\ FT\_ANY\_COLUMN\ (UINT\_MAX)\ \ \ \ \ }}
+\DoxyCodeLine{00766\ \textcolor{preprocessor}{\#define\ FT\_CUR\_COLUMN\ (UINT\_MAX\ -\/\ 1)\ }}
+\DoxyCodeLine{00767\ \textcolor{preprocessor}{\#define\ FT\_ANY\_ROW\ \ \ \ (UINT\_MAX)\ \ \ \ \ }}
+\DoxyCodeLine{00768\ \textcolor{preprocessor}{\#define\ FT\_CUR\_ROW\ \ \ \ (UINT\_MAX\ -\/\ 1)\ }}
+\DoxyCodeLine{00771\ \textcolor{preprocessor}{\#define\ FT\_MAX\_ROW\_INDEX\ (UINT\_MAX\ -\/\ 2)}}
+\DoxyCodeLine{00772\ \textcolor{preprocessor}{\#define\ FT\_MAX\_COL\_INDEX\ (UINT\_MAX\ -\/\ 2)}}
+\DoxyCodeLine{00773\ }
+\DoxyCodeLine{00774\ }
+\DoxyCodeLine{00779\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_MIN\_WIDTH\ \ \ \ \ \ \ \ (0x01U\ <<\ 0)\ }}
+\DoxyCodeLine{00780\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_TEXT\_ALIGN\ \ \ \ \ \ \ (0x01U\ <<\ 1)\ }}
+\DoxyCodeLine{00781\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_TOP\_PADDING\ \ \ \ \ \ (0x01U\ <<\ 2)\ }}
+\DoxyCodeLine{00782\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_BOTTOM\_PADDING\ \ \ (0x01U\ <<\ 3)\ }}
+\DoxyCodeLine{00783\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_LEFT\_PADDING\ \ \ \ \ (0x01U\ <<\ 4)\ }}
+\DoxyCodeLine{00784\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_RIGHT\_PADDING\ \ \ \ (0x01U\ <<\ 5)\ }}
+\DoxyCodeLine{00785\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_EMPTY\_STR\_HEIGHT\ (0x01U\ <<\ 6)\ }}
+\DoxyCodeLine{00786\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_ROW\_TYPE\ \ \ \ \ \ \ \ \ (0x01U\ <<\ 7)\ }}
+\DoxyCodeLine{00787\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_CONT\_FG\_COLOR\ \ \ \ (0x01U\ <<\ 8)\ }}
+\DoxyCodeLine{00788\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_CELL\_BG\_COLOR\ \ \ \ (0x01U\ <<\ 9)\ }}
+\DoxyCodeLine{00789\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_CONT\_BG\_COLOR\ \ \ \ (0x01U\ <<\ 10)\ }}
+\DoxyCodeLine{00790\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_CELL\_TEXT\_STYLE\ \ (0x01U\ <<\ 11)\ }}
+\DoxyCodeLine{00791\ \textcolor{preprocessor}{\#define\ FT\_CPROP\_CONT\_TEXT\_STYLE\ \ (0x01U\ <<\ 12)\ }}
+\DoxyCodeLine{00798\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63f}{ft\_color}}\ \{}
+\DoxyCodeLine{00799\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63face2e85ce681b17d9334eb832a1558445}{FT\_COLOR\_DEFAULT}}\ \ \ \ \ \ \ \ =\ 0,\ \ }
+\DoxyCodeLine{00800\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa6e1eb39443ae233746378aa84548f553}{FT\_COLOR\_BLACK}}\ \ \ \ \ \ \ \ \ \ =\ 1,\ \ }
+\DoxyCodeLine{00801\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63faf31632500abf110557632f09e267472d}{FT\_COLOR\_RED}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 2,\ \ }
+\DoxyCodeLine{00802\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fac27875bf7bc9bb9fec8e7beb79a308a0}{FT\_COLOR\_GREEN}}\ \ \ \ \ \ \ \ \ \ =\ 3,\ \ }
+\DoxyCodeLine{00803\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fae1942de73f0c49658b208f9c42a136a8}{FT\_COLOR\_YELLOW}}\ \ \ \ \ \ \ \ \ =\ 4,\ \ }
+\DoxyCodeLine{00804\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa646c06e02caa66410e13dc212242ef16}{FT\_COLOR\_BLUE}}\ \ \ \ \ \ \ \ \ \ \ =\ 5,\ \ }
+\DoxyCodeLine{00805\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa0f97227c2b13f6c2d88ca06761563a68}{FT\_COLOR\_MAGENTA}}\ \ \ \ \ \ \ \ =\ 6,\ \ }
+\DoxyCodeLine{00806\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa2e3e4b314fc75407fa5b38cee9fd5a5c}{FT\_COLOR\_CYAN}}\ \ \ \ \ \ \ \ \ \ \ =\ 7,\ \ }
+\DoxyCodeLine{00807\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa10c39c7d62795e90c3188f0b6a476f10}{FT\_COLOR\_LIGHT\_GRAY}}\ \ \ \ \ =\ 8,\ \ }
+\DoxyCodeLine{00808\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa4f7814c857a35ace99e77c721bdea819}{FT\_COLOR\_DARK\_GRAY}}\ \ \ \ \ \ =\ 9,\ \ }
+\DoxyCodeLine{00809\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63faee5e46a4b6fbeb64b6eddca826bdc7ae}{FT\_COLOR\_LIGHT\_RED}}\ \ \ \ \ \ =\ 10,\ }
+\DoxyCodeLine{00810\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa37dd75f161f83ea176f74a70a19e763f}{FT\_COLOR\_LIGHT\_GREEN}}\ \ \ \ =\ 11,\ }
+\DoxyCodeLine{00811\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa84816257c9a5f38a20d0e2ea848a5489}{FT\_COLOR\_LIGHT\_YELLOW}}\ \ \ =\ 12,\ }
+\DoxyCodeLine{00812\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63facebf9e4fe6e259bc0892bd1183c73800}{FT\_COLOR\_LIGHT\_BLUE}}\ \ \ \ \ =\ 13,\ }
+\DoxyCodeLine{00813\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fac181922016e12de1a32116b2f1eb5a1f}{FT\_COLOR\_LIGHT\_MAGENTA}}\ \ =\ 15,\ }
+\DoxyCodeLine{00814\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63fa3b5bdee67bbfca060a31ae3d700cb5c4}{FT\_COLOR\_LIGHT\_CYAN}}\ \ \ \ \ =\ 16,\ }
+\DoxyCodeLine{00815\ \ \ \ \ \mbox{\hyperlink{fort_8h_a8a64c62f618f7c34310da2e2ef31f63faebf36fa4c0f9ae7e8aaa651988686e42}{FT\_COLOR\_LIGHT\_WHYTE}}\ \ \ \ =\ 17\ \ }
+\DoxyCodeLine{00816\ \};}
+\DoxyCodeLine{00817\ }
+\DoxyCodeLine{00821\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0b}{ft\_text\_style}}\ \{}
+\DoxyCodeLine{00822\ \ \ \ \ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0bad81d0dad8f26df01c149638ccbb6b3e2}{FT\_TSTYLE\_DEFAULT}}\ \ \ \ =\ (1U\ <<\ 0),\ }
+\DoxyCodeLine{00823\ \ \ \ \ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0ba04256f30849c7cd2b4822e5030fa07fb}{FT\_TSTYLE\_BOLD}}\ \ \ \ \ \ \ =\ (1U\ <<\ 1),\ }
+\DoxyCodeLine{00824\ \ \ \ \ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0baf9c6c97ae4ea6c404ae2e57b8dfab101}{FT\_TSTYLE\_DIM}}\ \ \ \ \ \ \ \ =\ (1U\ <<\ 2),\ }
+\DoxyCodeLine{00825\ \ \ \ \ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0ba29c6547c7ae5a297a4547de1b15a3133}{FT\_TSTYLE\_ITALIC}}\ \ \ \ \ =\ (1U\ <<\ 3),\ }
+\DoxyCodeLine{00826\ \ \ \ \ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0ba41f3dc969345e99fda4ef48130184745}{FT\_TSTYLE\_UNDERLINED}}\ =\ (1U\ <<\ 4),\ }
+\DoxyCodeLine{00827\ \ \ \ \ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0ba36c9e2fd7b64982a8f7229fe965440d4}{FT\_TSTYLE\_BLINK}}\ \ \ \ \ \ =\ (1U\ <<\ 5),\ }
+\DoxyCodeLine{00828\ \ \ \ \ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0ba3a4c44c718da5e229c01ab7d6eb05366}{FT\_TSTYLE\_INVERTED}}\ \ \ =\ (1U\ <<\ 6),\ }
+\DoxyCodeLine{00829\ \ \ \ \ \mbox{\hyperlink{fort_8h_abc496f06f2a4c7fb58b1730ce813be0ba016fa7d5df89fd09ba7ed6daa7021b16}{FT\_TSTYLE\_HIDDEN}}\ \ \ \ \ =\ (1U\ <<\ 7)\ \ }
+\DoxyCodeLine{00830\ \};}
+\DoxyCodeLine{00831\ }
+\DoxyCodeLine{00832\ }
+\DoxyCodeLine{00836\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{fort_8h_a3ce6dedcf688e310a3cfbb5cdae9d32c}{ft\_text\_alignment}}\ \{}
+\DoxyCodeLine{00837\ \ \ \ \ \mbox{\hyperlink{fort_8h_a3ce6dedcf688e310a3cfbb5cdae9d32ca62837cbc7c859d5d38d608f51806e66d}{FT\_ALIGNED\_LEFT}}\ =\ 0,\ \ \ \ \ }
+\DoxyCodeLine{00838\ \ \ \ \ \mbox{\hyperlink{fort_8h_a3ce6dedcf688e310a3cfbb5cdae9d32cac43d09334b02f1300989a8789455183e}{FT\_ALIGNED\_CENTER}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00839\ \ \ \ \ \mbox{\hyperlink{fort_8h_a3ce6dedcf688e310a3cfbb5cdae9d32ca31bdf997c2db055fe5669e9e174277cc}{FT\_ALIGNED\_RIGHT}}\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00840\ \};}
+\DoxyCodeLine{00841\ }
+\DoxyCodeLine{00845\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{fort_8h_a06d9536a2e476d68f5055820535d3b34}{ft\_row\_type}}\ \{}
+\DoxyCodeLine{00846\ \ \ \ \ \mbox{\hyperlink{fort_8h_a06d9536a2e476d68f5055820535d3b34ae50a530e078dd8425784ca02e66d2433}{FT\_ROW\_COMMON}}\ =\ 0,\ \ \ \ \ \ }
+\DoxyCodeLine{00847\ \ \ \ \ \mbox{\hyperlink{fort_8h_a06d9536a2e476d68f5055820535d3b34a2a0a31078eac88202029c3e9bdaa614a}{FT\_ROW\_HEADER}}\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00848\ \};}
+\DoxyCodeLine{00849\ }
+\DoxyCodeLine{00861\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a894497fac87518023122266da59f8da1}{ft\_set\_default\_cell\_prop}}(uint32\_t\ property,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00862\ }
+\DoxyCodeLine{00880\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a10dc95b3d810a0ab2bf6c90b7b8c66a4}{ft\_set\_cell\_prop}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ row,\ \textcolor{keywordtype}{size\_t}\ col,\ uint32\_t\ property,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00881\ }
+\DoxyCodeLine{00882\ }
+\DoxyCodeLine{00887\ \textcolor{preprocessor}{\#define\ FT\_TPROP\_LEFT\_MARGIN\ \ \ \ \ (0x01U\ <<\ 0)}}
+\DoxyCodeLine{00888\ \textcolor{preprocessor}{\#define\ FT\_TPROP\_TOP\_MARGIN\ \ \ \ \ \ (0x01U\ <<\ 1)}}
+\DoxyCodeLine{00889\ \textcolor{preprocessor}{\#define\ FT\_TPROP\_RIGHT\_MARGIN\ \ \ \ (0x01U\ <<\ 2)}}
+\DoxyCodeLine{00890\ \textcolor{preprocessor}{\#define\ FT\_TPROP\_BOTTOM\_MARGIN\ \ \ (0x01U\ <<\ 3)}}
+\DoxyCodeLine{00891\ \textcolor{preprocessor}{\#define\ FT\_TPROP\_ADDING\_STRATEGY\ (0x01U\ <<\ 4)}}
+\DoxyCodeLine{00900\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{fort_8h_aeed2958a1823084ca6e71883b075baa5}{ft\_adding\_strategy}}\ \{}
+\DoxyCodeLine{00901\ \ \ \ \ \mbox{\hyperlink{fort_8h_aeed2958a1823084ca6e71883b075baa5aa620d123a0ac00710153d28a6ab65842}{FT\_STRATEGY\_REPLACE}}\ =\ 0,\ \ }
+\DoxyCodeLine{00902\ \ \ \ \ \mbox{\hyperlink{fort_8h_aeed2958a1823084ca6e71883b075baa5acc1102bce0611e414231a7e41357300f}{FT\_STRATEGY\_INSERT}}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00903\ \};}
+\DoxyCodeLine{00904\ }
+\DoxyCodeLine{00905\ }
+\DoxyCodeLine{00917\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a0ebdf7b17d363037f4b0d48ce1438a6c}{ft\_set\_default\_tbl\_prop}}(uint32\_t\ property,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00918\ }
+\DoxyCodeLine{00932\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_ac7ff4899d39f21d4cf8948c73bbb1595}{ft\_set\_tbl\_prop}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ uint32\_t\ property,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00933\ }
+\DoxyCodeLine{00934\ }
+\DoxyCodeLine{00950\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_ae958a4787cc8fee9abb452bbced096f8}{ft\_set\_cell\_span}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ row,\ \textcolor{keywordtype}{size\_t}\ col,\ \textcolor{keywordtype}{size\_t}\ hor\_span);}
+\DoxyCodeLine{00951\ }
+\DoxyCodeLine{00952\ }
+\DoxyCodeLine{00967\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fort_8h_a3477def0e7247bbccacb0c93530aaee7}{ft\_set\_memory\_funcs}}(\textcolor{keywordtype}{void}\ *(*f\_malloc)(\textcolor{keywordtype}{size\_t}\ size),\ \textcolor{keywordtype}{void}\ (*f\_free)(\textcolor{keywordtype}{void}\ *ptr));}
+\DoxyCodeLine{00968\ }
+\DoxyCodeLine{00969\ }
+\DoxyCodeLine{00978\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{fort_8h_ab2d62733c846a3d64dfa5a7c45d1c91b}{ft\_strerror}}(\textcolor{keywordtype}{int}\ error\_code);}
+\DoxyCodeLine{00979\ }
+\DoxyCodeLine{00980\ }
+\DoxyCodeLine{00981\ }
+\DoxyCodeLine{00982\ \textcolor{preprocessor}{\#ifdef\ FT\_HAVE\_WCHAR}}
+\DoxyCodeLine{00983\ }
+\DoxyCodeLine{00984\ }
+\DoxyCodeLine{00985\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a93dacf69774a8a84fecee3035ad7650e}{ft\_wprintf}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *fmt,\ ...);}
+\DoxyCodeLine{00986\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a756d50513a7dbf57d2e7144802dd23f4}{ft\_wprintf\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *fmt,\ ...);}
+\DoxyCodeLine{00987\ }
+\DoxyCodeLine{00988\ }
+\DoxyCodeLine{00989\ \textcolor{preprocessor}{\#define\ ft\_wwrite(table,\ ...)\(\backslash\)}}
+\DoxyCodeLine{00990\ \textcolor{preprocessor}{\ \ \ \ (0\ ?\ CHECK\_IF\_ARGS\_ARE\_WSTRINGS(\_\_VA\_ARGS\_\_)\ :\ ft\_nwwrite(table,\ FT\_PP\_NARG\_(\_\_VA\_ARGS\_\_),\ \_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{00991\ \textcolor{preprocessor}{\#define\ ft\_wwrite\_ln(table,\ ...)\(\backslash\)}}
+\DoxyCodeLine{00992\ \textcolor{preprocessor}{\ \ \ \ (0\ ?\ CHECK\_IF\_ARGS\_ARE\_WSTRINGS(\_\_VA\_ARGS\_\_)\ :\ ft\_nwwrite\_ln(table,\ FT\_PP\_NARG\_(\_\_VA\_ARGS\_\_),\ \_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{00993\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_aac28f7840d0a323ca3c4df1e6f43bdf6}{ft\_nwwrite}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ n,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *cell\_content,\ ...);}
+\DoxyCodeLine{00994\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a313b73c39aa6127200cd7b7fee92d8f0}{ft\_nwwrite\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ n,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *cell\_content,\ ...);}
+\DoxyCodeLine{00995\ }
+\DoxyCodeLine{00996\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a2bfe751bbf2c100eda336c30f73fe199}{ft\_row\_wwrite}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ cols,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *row\_cells[]);}
+\DoxyCodeLine{00997\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a50c12bee8800d14fc70e6cccb10aee1c}{ft\_row\_wwrite\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ cols,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *row\_cells[]);}
+\DoxyCodeLine{00998\ }
+\DoxyCodeLine{00999\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_adb37fd79298ef7f28d9304f3aa135f08}{ft\_table\_wwrite}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ rows,\ \textcolor{keywordtype}{size\_t}\ cols,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *table\_cells[]);}
+\DoxyCodeLine{01000\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_ac2c4cd5246efb7d713cc0ccd5dad49cf}{ft\_table\_wwrite\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ rows,\ \textcolor{keywordtype}{size\_t}\ cols,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *table\_cells[]);}
+\DoxyCodeLine{01001\ }
+\DoxyCodeLine{01002\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *\mbox{\hyperlink{fort_8h_a03479aafea9aefc5275a02df827cb780}{ft\_to\_wstring}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{01003\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01004\ }
+\DoxyCodeLine{01005\ }
+\DoxyCodeLine{01006\ }
+\DoxyCodeLine{01007\ \textcolor{preprocessor}{\#ifdef\ FT\_HAVE\_UTF8}}
+\DoxyCodeLine{01008\ \textcolor{preprocessor}{\#define\ ft\_u8write(table,\ ...)\(\backslash\)}}
+\DoxyCodeLine{01009\ \textcolor{preprocessor}{\ \ \ \ (ft\_u8nwrite(table,\ FT\_PP\_NARG\_(\_\_VA\_ARGS\_\_),\ \_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{01010\ \textcolor{preprocessor}{\#define\ ft\_u8write\_ln(table,\ ...)\(\backslash\)}}
+\DoxyCodeLine{01011\ \textcolor{preprocessor}{\ \ \ \ (ft\_u8nwrite\_ln(table,\ FT\_PP\_NARG\_(\_\_VA\_ARGS\_\_),\ \_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{01012\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a61aec826074239282309ce1369563f64}{ft\_u8nwrite}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ n,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *cell\_content,\ ...);}
+\DoxyCodeLine{01013\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a4c378ecb73c881a0793930c76a64ff41}{ft\_u8nwrite\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keywordtype}{size\_t}\ n,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *cell\_content,\ ...);}
+\DoxyCodeLine{01014\ }
+\DoxyCodeLine{01015\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_ac3f58cfaced19b8571c84aea0827d09b}{ft\_u8printf}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fmt,\ ...)\ \mbox{\hyperlink{fort_8h_a2c09d90642d39a222d6e4f723e2a93bd}{FT\_PRINTF\_ATTRIBUTE\_FORMAT}}(2,\ 3);}
+\DoxyCodeLine{01016\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fort_8h_a63da69eff3300456b04ec99118f76abc}{ft\_u8printf\_ln}}(\mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table,\ const\ \textcolor{keywordtype}{char}\ *fmt,\ ...)\ \mbox{\hyperlink{fort_8h_a2c09d90642d39a222d6e4f723e2a93bd}{FT\_PRINTF\_ATTRIBUTE\_FORMAT}}(2,\ 3);}
+\DoxyCodeLine{01017\ }
+\DoxyCodeLine{01018\ const\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{fort_8h_a1612cd9b9990ad7f45732831ce4e4577}{ft\_to\_u8string}}(const\ \mbox{\hyperlink{structft__table}{ft\_table\_t}}\ *table);}
+\DoxyCodeLine{01019\ }
+\DoxyCodeLine{01039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fort_8h_ac19c7bf75bde46f17a954159b27724f4}{ft\_set\_u8strwid\_func}}(\textcolor{keywordtype}{int}\ (*u8strwid)(const\ \textcolor{keywordtype}{void}\ *beg,\ const\ \textcolor{keywordtype}{void}\ *end,\ \textcolor{keywordtype}{size\_t}\ *width));}
+\DoxyCodeLine{01040\ }
+\DoxyCodeLine{01041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ FT\_HAVE\_UTF8\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{01042\ }
+\DoxyCodeLine{01043\ }
+\DoxyCodeLine{01044\ FT\_END\_DECLS}
+\DoxyCodeLine{01045\ }
+\DoxyCodeLine{01046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LIBFORT\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

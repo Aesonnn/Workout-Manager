@@ -1,0 +1,65 @@
+\doxysection{date.\+h File Reference}
+\hypertarget{date_8h}{}\label{date_8h}\index{date.h@{date.h}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_date}{Date}}
+\begin{DoxyCompactList}\small\item\em Represents the date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{date_8h_af7ada80c7c34b250f290a8008f0fc047}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{struct_date}{Date}} \&d)
+\begin{DoxyCompactList}\small\item\em Overloaded insertion operator to output \doxylink{struct_date}{Date} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_date}{Date}} \mbox{\hyperlink{date_8h_a34b44015c85d74c7ff021b6112a7105d}{getstringdate}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a \doxylink{struct_date}{Date} object from user input as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{date_8h_a34b44015c85d74c7ff021b6112a7105d}\label{date_8h_a34b44015c85d74c7ff021b6112a7105d} 
+\index{date.h@{date.h}!getstringdate@{getstringdate}}
+\index{getstringdate@{getstringdate}!date.h@{date.h}}
+\doxysubsubsection{\texorpdfstring{getstringdate()}{getstringdate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_date}{Date}} getstringdate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves a \doxylink{struct_date}{Date} object from user input as a string. 
+
+It validates the input, ensuring that the day, month, and year values are valid and conform to the Gregorian calendar rules. If the user enters an invalid date, the function prompts for a valid date until one is provided. 
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & gets thrown and caught if the user enters invalid date \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Dare object representing the valid date entered by the user 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The input is provided through standard input (cin) 
+\end{DoxyNote}
+\Hypertarget{date_8h_af7ada80c7c34b250f290a8008f0fc047}\label{date_8h_af7ada80c7c34b250f290a8008f0fc047} 
+\index{date.h@{date.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!date.h@{date.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{struct_date}{Date}} \&}]{d }\end{DoxyParamCaption})}
+
+
+
+Overloaded insertion operator to output \doxylink{struct_date}{Date} object. 
+
+Friend Overloaded insertion operator to output \doxylink{struct_date}{Date} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to write the \doxylink{struct_date}{Date} object to. \\
+\hline
+{\em d} & The \doxylink{struct_date}{Date} object to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream after writing the \doxylink{struct_date}{Date} object. 
+\end{DoxyReturn}

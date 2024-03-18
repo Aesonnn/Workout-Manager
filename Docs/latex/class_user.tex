@@ -1,0 +1,263 @@
+\doxysection{User Class Reference}
+\hypertarget{class_user}{}\label{class_user}\index{User@{User}}
+
+
+Represents the \doxylink{class_user}{User} account.  
+
+
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{class_user_a4a9bd2b25fe769bf19de0175e6e138a0}{get\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Getter. Returns the ID of the \doxylink{class_user}{User}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a6ae433633c205ae030a4715e6797d997}{set\+\_\+id}} (int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Setter. Sets the \doxylink{class_user}{User}\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a6714209be75d13b7b601481321896d4d}{set\+\_\+username}} (std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em Setter. Sets the username. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a4da0443924a8b3e702e85ac54603d6b1}{set\+\_\+password}} (std\+::string \&p)
+\begin{DoxyCompactList}\small\item\em Setter. Sets the passwod. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_acf0700a9b5d42d763b3dae9ba26c7877}{get\+\_\+username}} ()
+\begin{DoxyCompactList}\small\item\em Getter. Returns the username of the \doxylink{class_user}{User}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_abf5c8eb3e38f9cba13e8e6c6ba04cb7b}{get\+\_\+password}} ()
+\begin{DoxyCompactList}\small\item\em Getter. Returns the password of the \doxylink{class_user}{User}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_a4a0137053e591fbb79d9057dd7d2283d}{User}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_a461506a29df60bb94b8db9e10dd5e5a5}{User}} (std\+::string n, int16\+\_\+t a, std\+::string us, std\+::string pass)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_user_a085d8d69282b6298964eab8351584536}{name}}
+\begin{DoxyCompactList}\small\item\em Name. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{class_user_a556202cbeec89f31ac81877383df27ca}{age}}
+\begin{DoxyCompactList}\small\item\em Age. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{class_user_aab9c855fbbed9e99871da298ba152bac}{user\+\_\+count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{class_user_a23945b025932277a661643b3e7e351cf}{id}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User} ID. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_aacbb807e514280f69e00bec7d71f3aee}{username}}
+\begin{DoxyCompactList}\small\item\em Username. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}
+\begin{DoxyCompactList}\small\item\em password. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the \doxylink{class_user}{User} account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em username} & \\
+\hline
+{\em password} & \\
+\hline
+{\em user\+\_\+count} & \\
+\hline
+{\em name} & \\
+\hline
+{\em age} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_a4a0137053e591fbb79d9057dd7d2283d}\label{class_user_a4a0137053e591fbb79d9057dd7d2283d} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates a new \doxylink{class_user}{User} object with id and age initialized to 0 . \Hypertarget{class_user_a461506a29df60bb94b8db9e10dd5e5a5}\label{class_user_a461506a29df60bb94b8db9e10dd5e5a5} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{n,  }\item[{int16\+\_\+t}]{a,  }\item[{std\+::string}]{us,  }\item[{std\+::string}]{pass }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new \doxylink{class_user}{User} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Name of \doxylink{class_user}{User}. \\
+\hline
+{\em a} & Age of \doxylink{class_user}{User}. \\
+\hline
+{\em us} & Username. \\
+\hline
+{\em pass} & \doxylink{class_user}{User} password. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_a4a9bd2b25fe769bf19de0175e6e138a0}\label{class_user_a4a9bd2b25fe769bf19de0175e6e138a0} 
+\index{User@{User}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!User@{User}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily int32\+\_\+t User\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter. Returns the ID of the \doxylink{class_user}{User}. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the \doxylink{class_user}{User}. 
+\end{DoxyReturn}
+\Hypertarget{class_user_abf5c8eb3e38f9cba13e8e6c6ba04cb7b}\label{class_user_abf5c8eb3e38f9cba13e8e6c6ba04cb7b} 
+\index{User@{User}!get\_password@{get\_password}}
+\index{get\_password@{get\_password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{get\_password()}{get\_password()}}
+{\footnotesize\ttfamily std\+::string User\+::get\+\_\+password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter. Returns the password of the \doxylink{class_user}{User}. 
+
+\begin{DoxyReturn}{Returns}
+The password of the \doxylink{class_user}{User}. 
+\end{DoxyReturn}
+\Hypertarget{class_user_acf0700a9b5d42d763b3dae9ba26c7877}\label{class_user_acf0700a9b5d42d763b3dae9ba26c7877} 
+\index{User@{User}!get\_username@{get\_username}}
+\index{get\_username@{get\_username}!User@{User}}
+\doxysubsubsection{\texorpdfstring{get\_username()}{get\_username()}}
+{\footnotesize\ttfamily std\+::string User\+::get\+\_\+username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter. Returns the username of the \doxylink{class_user}{User}. 
+
+\begin{DoxyReturn}{Returns}
+The username of the \doxylink{class_user}{User}. 
+\end{DoxyReturn}
+\Hypertarget{class_user_a6ae433633c205ae030a4715e6797d997}\label{class_user_a6ae433633c205ae030a4715e6797d997} 
+\index{User@{User}!set\_id@{set\_id}}
+\index{set\_id@{set\_id}!User@{User}}
+\doxysubsubsection{\texorpdfstring{set\_id()}{set\_id()}}
+{\footnotesize\ttfamily void User\+::set\+\_\+id (\begin{DoxyParamCaption}\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Setter. Sets the \doxylink{class_user}{User}\textquotesingle{}s ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em us\+\_\+id} & The ID to set for the \doxylink{class_user}{User} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_a4da0443924a8b3e702e85ac54603d6b1}\label{class_user_a4da0443924a8b3e702e85ac54603d6b1} 
+\index{User@{User}!set\_password@{set\_password}}
+\index{set\_password@{set\_password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{set\_password()}{set\_password()}}
+{\footnotesize\ttfamily void User\+::set\+\_\+password (\begin{DoxyParamCaption}\item[{std\+::string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Setter. Sets the passwod. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The password to set for the \doxylink{class_user}{User} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_a6714209be75d13b7b601481321896d4d}\label{class_user_a6714209be75d13b7b601481321896d4d} 
+\index{User@{User}!set\_username@{set\_username}}
+\index{set\_username@{set\_username}!User@{User}}
+\doxysubsubsection{\texorpdfstring{set\_username()}{set\_username()}}
+{\footnotesize\ttfamily void User\+::set\+\_\+username (\begin{DoxyParamCaption}\item[{std\+::string \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Setter. Sets the username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The name to set for the \doxylink{class_user}{User} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_user_a556202cbeec89f31ac81877383df27ca}\label{class_user_a556202cbeec89f31ac81877383df27ca} 
+\index{User@{User}!age@{age}}
+\index{age@{age}!User@{User}}
+\doxysubsubsection{\texorpdfstring{age}{age}}
+{\footnotesize\ttfamily int16\+\_\+t User\+::age}
+
+
+
+Age. 
+
+\Hypertarget{class_user_a23945b025932277a661643b3e7e351cf}\label{class_user_a23945b025932277a661643b3e7e351cf} 
+\index{User@{User}!id@{id}}
+\index{id@{id}!User@{User}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int32\+\_\+t User\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_user}{User} ID. 
+
+\Hypertarget{class_user_a085d8d69282b6298964eab8351584536}\label{class_user_a085d8d69282b6298964eab8351584536} 
+\index{User@{User}!name@{name}}
+\index{name@{name}!User@{User}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string User\+::name}
+
+
+
+Name. 
+
+\Hypertarget{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}\label{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f} 
+\index{User@{User}!password@{password}}
+\index{password@{password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily std\+::string User\+::password\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+password. 
+
+\Hypertarget{class_user_aab9c855fbbed9e99871da298ba152bac}\label{class_user_aab9c855fbbed9e99871da298ba152bac} 
+\index{User@{User}!user\_count@{user\_count}}
+\index{user\_count@{user\_count}!User@{User}}
+\doxysubsubsection{\texorpdfstring{user\_count}{user\_count}}
+{\footnotesize\ttfamily int32\+\_\+t User\+::user\+\_\+count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of users. 
+
+\Hypertarget{class_user_aacbb807e514280f69e00bec7d71f3aee}\label{class_user_aacbb807e514280f69e00bec7d71f3aee} 
+\index{User@{User}!username@{username}}
+\index{username@{username}!User@{User}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily std\+::string User\+::username\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Username. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{user_8h}{user.\+h}}\item 
+\mbox{\hyperlink{user_8cpp}{user.\+cpp}}\end{DoxyCompactItemize}

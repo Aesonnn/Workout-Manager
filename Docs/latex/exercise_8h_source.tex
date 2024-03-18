@@ -1,0 +1,31 @@
+\doxysection{exercise.\+h}
+\hypertarget{exercise_8h_source}{}\label{exercise_8h_source}\mbox{\hyperlink{exercise_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EXERCISE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EXERCISE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utilities_8h}{utilities.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_exercise}{Exercise}}\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_exercise_a590a6a176b505009db696303ca3e476f}{exercise\_count}};}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_exercise_a3123262631649f25f38ac3756a28e821}{name}};}
+\DoxyCodeLine{00023\ \ \ \ \ int32\_t\ \mbox{\hyperlink{struct_exercise_a86cb74695fc82921f4a24cc6404b4380}{id}};}
+\DoxyCodeLine{00025\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_exercise_adaf7ddb9e5113441dd65a50b229fee61}{sets}};}
+\DoxyCodeLine{00027\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_exercise_a162dc5a43958e111b011b0a5b8a60313}{reps}};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}\ \mbox{\hyperlink{struct_exercise_a4254f77a9ab88e4d0e0cdb862036e8a6}{difficulty}};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{struct_exercise_a9707094804f79ebc6aeaa597600db682}{Exercise}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{struct_exercise_a9707094804f79ebc6aeaa597600db682}{Exercise}}(std::string\ n,\ int16\_t\ s,\ int16\_t\ r,\ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}\ diff);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_exercise_ac2c9b4ba18e8c4a954eb90688d2b29ea}{operator==}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ t)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_exercise_a06725bad4912e978d1e10e0c7d90be66}{compareByDiff}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_exercise}{Exercise}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_exercise_a33c898be2f871d8b55101c9edf7d16d4}{compareByName}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_exercise}{Exercise}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00077\ std::ostream\&\ \mbox{\hyperlink{exercise_8h_ab449884eb80c3b27da21a1e562a59a18}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_exercise}{Exercise}}\&\ e);}
+\DoxyCodeLine{00084\ std::ostream\&\ \mbox{\hyperlink{exercise_8h_ab449884eb80c3b27da21a1e562a59a18}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ std::vector<Exercise>\&\ exvec);}
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{exercise_8h_a9c729f5a2e83cd2a382617dc4bd386f9}{getexercises}}(std::vector<Exercise>\&e);}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !EXERCISE\_H}}
+\DoxyCodeLine{00092\ }
+
+\end{DoxyCode}

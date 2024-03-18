@@ -1,0 +1,34 @@
+\doxysection{date.\+h}
+\hypertarget{date_8h_source}{}\label{date_8h_source}\mbox{\hyperlink{date_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DATE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DATE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_date}{Date}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{struct_date_af7ada80c7c34b250f290a8008f0fc047}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_date}{Date}}\&\ d);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_date_a32927b4e5760ad46c6ff38e4c7817054}{day}};}
+\DoxyCodeLine{00025\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_date_a3ae42a3d0f14a1ef2495d0f8d554089d}{month}};}
+\DoxyCodeLine{00027\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_date_a9075a8d66190dd99b5f23ffc07c00ab9}{year}};}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_date_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{struct_date_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date}}(uint16\_t\ d,\ uint16\_t\ m,\ int16\_t\ y);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_date_a02f47a6b31c2ef1c58211f6623c98ce7}{isLeapYear}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_date_a07cc65f130d4398067a86276b43294ca}{isValidDate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_date_a56469dbfb6a0c32326330796cb316881}{operator\ <\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_date}{Date}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_date_ab2943ef426612046e084e2d885c5fed4}{operator\ >\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_date}{Date}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_date_a93d583e1a8eae7cc606a6fdbfc3c5c58}{operator\ >=\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_date}{Date}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_date_aff6e110a1bba92225dfa094e904c003e}{operator\ <=\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_date}{Date}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00090\ std::ostream\&\ \mbox{\hyperlink{date_8h_af7ada80c7c34b250f290a8008f0fc047}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_date}{Date}}\&\ d);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00104\ \mbox{\hyperlink{struct_date}{Date}}\ \mbox{\hyperlink{date_8h_a34b44015c85d74c7ff021b6112a7105d}{getstringdate}}();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !DATE\_H}}
+
+\end{DoxyCode}

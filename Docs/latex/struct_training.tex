@@ -1,0 +1,164 @@
+\doxysection{Training Struct Reference}
+\hypertarget{struct_training}{}\label{struct_training}\index{Training@{Training}}
+
+
+Holds relations between workouts and exercises.  
+
+
+
+
+{\ttfamily \#include $<$Training.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_training_af98b1bc7ed710e2fa008a72ad29dbdae}{Training}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates a new \doxylink{struct_training}{Training} object with w\+\_\+id and e\+\_\+id initialized to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_training_a9b5844cd7f4df810ea7097c7685e114f}{Training}} (int32\+\_\+t w, int32\+\_\+t e)
+\begin{DoxyCompactList}\small\item\em Constructor. Creates a new \doxylink{struct_training}{Training} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_training_ad58e122860e2b38ad2430b40d07ba0f1}{operator==}} (const \mbox{\hyperlink{struct_workout}{Workout}} \&t) const
+\begin{DoxyCompactList}\small\item\em Equivalence overloading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_training_a35d1fa30941d48c0c1a7097ef1f524fe}{operator$>$}} (const \mbox{\hyperlink{struct_training}{Training}} \&other) const
+\begin{DoxyCompactList}\small\item\em Greater-\/than overloading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_training_a8ab68b4593c5daa5d8a7190ba535c12f}{operator$<$}} (const \mbox{\hyperlink{struct_training}{Training}} \&other) const
+\begin{DoxyCompactList}\small\item\em Less-\/than overloading. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_training_a28e1728daf15092cd9dcd3304ae0fcbb}{w\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_workout}{Workout} ID. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{struct_training_af46227169fcf181796e8ac11bf6b96b8}{e\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_exercise}{Exercise} ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds relations between workouts and exercises. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w\+\_\+id} & \\
+\hline
+{\em e\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_workout}{Workout} class 
+
+\doxylink{struct_exercise}{Exercise} class 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_training_af98b1bc7ed710e2fa008a72ad29dbdae}\label{struct_training_af98b1bc7ed710e2fa008a72ad29dbdae} 
+\index{Training@{Training}!Training@{Training}}
+\index{Training@{Training}!Training@{Training}}
+\doxysubsubsection{\texorpdfstring{Training()}{Training()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Training\+::\+Training (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. Creates a new \doxylink{struct_training}{Training} object with w\+\_\+id and e\+\_\+id initialized to 0. 
+
+\Hypertarget{struct_training_a9b5844cd7f4df810ea7097c7685e114f}\label{struct_training_a9b5844cd7f4df810ea7097c7685e114f} 
+\index{Training@{Training}!Training@{Training}}
+\index{Training@{Training}!Training@{Training}}
+\doxysubsubsection{\texorpdfstring{Training()}{Training()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Training\+::\+Training (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{w,  }\item[{int32\+\_\+t}]{e }\end{DoxyParamCaption})}
+
+
+
+Constructor. Creates a new \doxylink{struct_training}{Training} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \doxylink{struct_workout}{Workout} ID. \\
+\hline
+{\em e} & \doxylink{struct_exercise}{Exercise} ID. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_training_a8ab68b4593c5daa5d8a7190ba535c12f}\label{struct_training_a8ab68b4593c5daa5d8a7190ba535c12f} 
+\index{Training@{Training}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Training@{Training}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Training\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_training}{Training}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Less-\/than overloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{struct_training}{Training} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_training}{Training} is less than other \doxylink{struct_training}{Training}. 
+\end{DoxyReturn}
+\Hypertarget{struct_training_ad58e122860e2b38ad2430b40d07ba0f1}\label{struct_training_ad58e122860e2b38ad2430b40d07ba0f1} 
+\index{Training@{Training}!operator==@{operator==}}
+\index{operator==@{operator==}!Training@{Training}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Training\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_workout}{Workout}} \&}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Equivalence overloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxylink{struct_workout}{Workout} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the ID is qual to the \doxylink{struct_workout}{Workout} ID. 
+\end{DoxyReturn}
+\Hypertarget{struct_training_a35d1fa30941d48c0c1a7097ef1f524fe}\label{struct_training_a35d1fa30941d48c0c1a7097ef1f524fe} 
+\index{Training@{Training}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Training@{Training}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Training\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_training}{Training}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Greater-\/than overloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{struct_training}{Training} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_training}{Training} is greater than other \doxylink{struct_training}{Training}. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_training_af46227169fcf181796e8ac11bf6b96b8}\label{struct_training_af46227169fcf181796e8ac11bf6b96b8} 
+\index{Training@{Training}!e\_id@{e\_id}}
+\index{e\_id@{e\_id}!Training@{Training}}
+\doxysubsubsection{\texorpdfstring{e\_id}{e\_id}}
+{\footnotesize\ttfamily int32\+\_\+t Training\+::e\+\_\+id}
+
+
+
+\doxylink{struct_exercise}{Exercise} ID. 
+
+\Hypertarget{struct_training_a28e1728daf15092cd9dcd3304ae0fcbb}\label{struct_training_a28e1728daf15092cd9dcd3304ae0fcbb} 
+\index{Training@{Training}!w\_id@{w\_id}}
+\index{w\_id@{w\_id}!Training@{Training}}
+\doxysubsubsection{\texorpdfstring{w\_id}{w\_id}}
+{\footnotesize\ttfamily int32\+\_\+t Training\+::w\+\_\+id}
+
+
+
+\doxylink{struct_workout}{Workout} ID. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_training_8h}{Training.\+h}}\item 
+\mbox{\hyperlink{_training_8cpp}{Training.\+cpp}}\end{DoxyCompactItemize}

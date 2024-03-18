@@ -1,0 +1,294 @@
+\doxysection{binaryrw.\+cpp File Reference}
+\hypertarget{binaryrw_8cpp}{}\label{binaryrw_8cpp}\index{binaryrw.cpp@{binaryrw.cpp}}
+{\ttfamily \#include \"{}binaryrw.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{binaryrw_8cpp_a223c2e72ee7c2cfe75b080f738bc30cb}{write\+\_\+users}} (std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&users)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \mbox{\hyperlink{binaryrw_8cpp_a36b31c63963a38d4714dc9b80ca7387b}{read\+\_\+users}} ()
+\begin{DoxyCompactList}\small\item\em Read users from file and store them in a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{binaryrw_8cpp_a467b04c9eabb9ab830270e88874aaa92}{save\+\_\+data}} (const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exs, std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&works, const std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trs, int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Save all user data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{binaryrw_8cpp_a55721636cf12d06e22bf222978cf081d}{read\+\_\+data}} (std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&allexercises, std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&works, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trs, int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Read all user data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{binaryrw_8cpp_aebf9a8523d0a0e3d5eb78c7b440072c4}{write\+\_\+exs}} (const std\+::string \&fname, const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exs, int32\+\_\+t \&us\+\_\+id)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \mbox{\hyperlink{binaryrw_8cpp_a86b4873a30e92b197291a710e35927e6}{read\+\_\+exs}} (const std\+::string \&fname, int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Read Exercises from file and store them in a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{binaryrw_8cpp_aa7c405c0aa8cd27088055f89356b4af7}{write\+\_\+workouts}} (const std\+::string \&fname, std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&works, int32\+\_\+t \&us\+\_\+id)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \mbox{\hyperlink{binaryrw_8cpp_a85cf92c0c1f8f7dae18195e1a399c02c}{read\+\_\+workouts}} (const std\+::string \&fname, int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Read Workouts from file and store them in a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{binaryrw_8cpp_ae81bd21cb3bf0b0bd0fa6bfeb87dd781}{write\+\_\+trainings}} (const std\+::string \&fname, const std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trs, int32\+\_\+t \&us\+\_\+id)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \mbox{\hyperlink{binaryrw_8cpp_a7b56f99c47dc43eb82b13c225800d8d2}{read\+\_\+trainings}} (const std\+::string \&fname, int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Read Trainings from file and store them in a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{binaryrw_8cpp_a55721636cf12d06e22bf222978cf081d}\label{binaryrw_8cpp_a55721636cf12d06e22bf222978cf081d} 
+\index{binaryrw.cpp@{binaryrw.cpp}!read\_data@{read\_data}}
+\index{read\_data@{read\_data}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_data()}{read\_data()}}
+{\footnotesize\ttfamily void read\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{allexercises,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{works,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trs,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Read all user data. 
+
+Calls 3 functions for reading Workouts, Exercises, Trainings.
+
+Catches the exceptions thrown by these functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em allexercises} & Vector of exercises to read \\
+\hline
+{\em works} & Vector of workouts to read \\
+\hline
+{\em trs} & Vector of trainings to read \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{binaryrw_8h_a86b4873a30e92b197291a710e35927e6}{read\+\_\+exs(const std\+::string \&fname, int32\+\_\+t \&us\+\_\+id)} 
+
+\doxylink{binaryrw_8h_a85cf92c0c1f8f7dae18195e1a399c02c}{read\+\_\+workouts(const std\+::string \&fname, int32\+\_\+t \&us\+\_\+id)} 
+
+\doxylink{binaryrw_8h_a7b56f99c47dc43eb82b13c225800d8d2}{read\+\_\+trainings(const std\+::string \&fname, int32\+\_\+t \&us\+\_\+id)}; 
+\end{DoxySeeAlso}
+\Hypertarget{binaryrw_8cpp_a86b4873a30e92b197291a710e35927e6}\label{binaryrw_8cpp_a86b4873a30e92b197291a710e35927e6} 
+\index{binaryrw.cpp@{binaryrw.cpp}!read\_exs@{read\_exs}}
+\index{read\_exs@{read\_exs}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_exs()}{read\_exs()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ read\+\_\+exs (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fname,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Read Exercises from file and store them in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & File address from which to read \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Corrupted.} & Could not open the file. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Exercise$>$ The vector of all Exercises. 
+\end{DoxyReturn}
+\Hypertarget{binaryrw_8cpp_a7b56f99c47dc43eb82b13c225800d8d2}\label{binaryrw_8cpp_a7b56f99c47dc43eb82b13c225800d8d2} 
+\index{binaryrw.cpp@{binaryrw.cpp}!read\_trainings@{read\_trainings}}
+\index{read\_trainings@{read\_trainings}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_trainings()}{read\_trainings()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ read\+\_\+trainings (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fname,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Read Trainings from file and store them in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & File address from which to read \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Corrupted.} & Could not open the file. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Training$>$ The vector of all Trainings. 
+\end{DoxyReturn}
+\Hypertarget{binaryrw_8cpp_a36b31c63963a38d4714dc9b80ca7387b}\label{binaryrw_8cpp_a36b31c63963a38d4714dc9b80ca7387b} 
+\index{binaryrw.cpp@{binaryrw.cpp}!read\_users@{read\_users}}
+\index{read\_users@{read\_users}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_users()}{read\_users()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ read\+\_\+users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read users from file and store them in a vector. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+User$>$ The vector of all users. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Corrupted.} & Could not open the file. Your data has been either corrupted or deleted, \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{binaryrw_8cpp_a85cf92c0c1f8f7dae18195e1a399c02c}\label{binaryrw_8cpp_a85cf92c0c1f8f7dae18195e1a399c02c} 
+\index{binaryrw.cpp@{binaryrw.cpp}!read\_workouts@{read\_workouts}}
+\index{read\_workouts@{read\_workouts}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_workouts()}{read\_workouts()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ read\+\_\+workouts (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fname,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Read Workouts from file and store them in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & File address from which to read \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Corrupted.} & Could not open the file. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Workout$>$ The vector of all Workouts. 
+\end{DoxyReturn}
+\Hypertarget{binaryrw_8cpp_a467b04c9eabb9ab830270e88874aaa92}\label{binaryrw_8cpp_a467b04c9eabb9ab830270e88874aaa92} 
+\index{binaryrw.cpp@{binaryrw.cpp}!save\_data@{save\_data}}
+\index{save\_data@{save\_data}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{save\_data()}{save\_data()}}
+{\footnotesize\ttfamily void save\+\_\+data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exs,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{works,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trs,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Save all user data. 
+
+Calls 3 functions for saving Workouts, Exercises, Trainings.
+
+Catches the exceptions thrown by these functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em exs} & Vector of exercises to write \\
+\hline
+{\em works} & Vector of workouts to write \\
+\hline
+{\em trs} & Vector of trainings to write \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+write\+\_\+exs(std\+::string \&fname,  const std\+::vector$<$\+Exercise$>$ \&exs, int32\+\_\+t \&us\+\_\+id) 
+
+write\+\_\+workouts(std\+::string \&fname,  std\+::vector$<$\+Workout$>$ \&works, int32\+\_\+t \&us\+\_\+id) 
+
+write\+\_\+trainings(std\+::string \&fname,  std\+::vector$<$\+Training$>$ \&trs, int32\+\_\+t \&us\+\_\+id) 
+\end{DoxySeeAlso}
+\Hypertarget{binaryrw_8cpp_aebf9a8523d0a0e3d5eb78c7b440072c4}\label{binaryrw_8cpp_aebf9a8523d0a0e3d5eb78c7b440072c4} 
+\index{binaryrw.cpp@{binaryrw.cpp}!write\_exs@{write\_exs}}
+\index{write\_exs@{write\_exs}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{write\_exs()}{write\_exs()}}
+{\footnotesize\ttfamily void write\+\_\+exs (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fname,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exs,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+Write a list of exercises into a file according to the format.
+
+The format of the file is as follows.\hypertarget{binaryrw_8h_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{File header}{File header}}\label{binaryrw_8h_autotoc_md6}
+\hypertarget{binaryrw_8h_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} Offset \texorpdfstring{$\vert$}{|} Size  \texorpdfstring{$\vert$}{|} Purpose                                                \texorpdfstring{$\vert$}{|}}{| Offset | Size  | Purpose                                                |}}\label{binaryrw_8h_autotoc_md7}
+\texorpdfstring{$\vert$}{|} 0x00 \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} The header field to identify the file is {\ttfamily EX} in ASCII \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x02 \texorpdfstring{$\vert$}{|} 3 B \texorpdfstring{$\vert$}{|} File format version number is {\ttfamily 1.\+0} in ASCII \texorpdfstring{$\vert$}{|} \hypertarget{binaryrw_8h_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} 0x05   \texorpdfstring{$\vert$}{|} 8 B   \texorpdfstring{$\vert$}{|} UNIX timestamp of last modification                    \texorpdfstring{$\vert$}{|}}{| 0x05   | 8 B   | UNIX timestamp of last modification                    |}}\label{binaryrw_8h_autotoc_md8}
+\hypertarget{binaryrw_8h_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{EX records for individual exercises}{EX records for individual exercises}}\label{binaryrw_8h_autotoc_md9}
+\hypertarget{binaryrw_8h_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} Offset \texorpdfstring{$\vert$}{|} Size  \texorpdfstring{$\vert$}{|} Purpose                                                \texorpdfstring{$\vert$}{|}}{| Offset | Size  | Purpose                                                |}}\label{binaryrw_8h_autotoc_md10}
+\texorpdfstring{$\vert$}{|} 0x00 \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the exercise in bytes \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x01 \texorpdfstring{$\vert$}{|} 4 B \texorpdfstring{$\vert$}{|} \doxylink{struct_exercise}{Exercise} id \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x05 \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} Number of sets \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x07 \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} Number of reps \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x09 \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the name in bytes SN \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} .... \texorpdfstring{$\vert$}{|} SN B \texorpdfstring{$\vert$}{|} Name \texorpdfstring{$\vert$}{|} \hypertarget{binaryrw_8h_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} ....   \texorpdfstring{$\vert$}{|} 4 B   \texorpdfstring{$\vert$}{|} Difficulty                                             \texorpdfstring{$\vert$}{|}}{| ....   | 4 B   | Difficulty                                             |}}\label{binaryrw_8h_autotoc_md11}
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & Directory where to write the file. \\
+\hline
+{\em exs} & The list of exercises. \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} id.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_file_not_found_corrupted}{File\+Not\+Found\+Corrupted}} & Failure to write to the file. check if it is possible to write to current directory. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{binaryrw_8cpp_ae81bd21cb3bf0b0bd0fa6bfeb87dd781}\label{binaryrw_8cpp_ae81bd21cb3bf0b0bd0fa6bfeb87dd781} 
+\index{binaryrw.cpp@{binaryrw.cpp}!write\_trainings@{write\_trainings}}
+\index{write\_trainings@{write\_trainings}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{write\_trainings()}{write\_trainings()}}
+{\footnotesize\ttfamily void write\+\_\+trainings (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fname,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trs,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+Write a list of trainings into a file according to the format.
+
+The format of the file is as follows.\hypertarget{binaryrw_8h_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{File header}{File header}}\label{binaryrw_8h_autotoc_md18}
+\hypertarget{binaryrw_8h_autotoc_md19}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} Offset \texorpdfstring{$\vert$}{|} Size  \texorpdfstring{$\vert$}{|} Purpose                                                \texorpdfstring{$\vert$}{|}}{| Offset | Size  | Purpose                                                |}}\label{binaryrw_8h_autotoc_md19}
+\texorpdfstring{$\vert$}{|} 0x00 \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} The header field to identify the file is {\ttfamily TR} in ASCII \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x02 \texorpdfstring{$\vert$}{|} 3 B \texorpdfstring{$\vert$}{|} File format version number is {\ttfamily 1.\+0} in ASCII \texorpdfstring{$\vert$}{|} \hypertarget{binaryrw_8h_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} 0x05   \texorpdfstring{$\vert$}{|} 8 B   \texorpdfstring{$\vert$}{|} UNIX timestamp of last modification                    \texorpdfstring{$\vert$}{|}}{| 0x05   | 8 B   | UNIX timestamp of last modification                    |}}\label{binaryrw_8h_autotoc_md20}
+\hypertarget{binaryrw_8h_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{TR records for individual workouts}{TR records for individual workouts}}\label{binaryrw_8h_autotoc_md21}
+\hypertarget{binaryrw_8h_autotoc_md22}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} Offset \texorpdfstring{$\vert$}{|} Size  \texorpdfstring{$\vert$}{|} Purpose                                                \texorpdfstring{$\vert$}{|}}{| Offset | Size  | Purpose                                                |}}\label{binaryrw_8h_autotoc_md22}
+\texorpdfstring{$\vert$}{|} 0x00 \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the training in bytes \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x01 \texorpdfstring{$\vert$}{|} 4 B \texorpdfstring{$\vert$}{|} \doxylink{struct_workout}{Workout} ID \texorpdfstring{$\vert$}{|} \hypertarget{binaryrw_8h_autotoc_md23}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} 0x05   \texorpdfstring{$\vert$}{|} 4 B   \texorpdfstring{$\vert$}{|} Exercise ID                                            \texorpdfstring{$\vert$}{|}}{| 0x05   | 4 B   | Exercise ID                                            |}}\label{binaryrw_8h_autotoc_md23}
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & Directory where to write the file. \\
+\hline
+{\em trs} & The list of trainigs. \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} id.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_file_not_found_corrupted}{File\+Not\+Found\+Corrupted}} & Failure to write to the file. check if it is possible to write to current directory. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{binaryrw_8cpp_a223c2e72ee7c2cfe75b080f738bc30cb}\label{binaryrw_8cpp_a223c2e72ee7c2cfe75b080f738bc30cb} 
+\index{binaryrw.cpp@{binaryrw.cpp}!write\_users@{write\_users}}
+\index{write\_users@{write\_users}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{write\_users()}{write\_users()}}
+{\footnotesize\ttfamily void write\+\_\+users (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&}]{users }\end{DoxyParamCaption})}
+
+Write a list of exercises into a file according to the format.
+
+The format of the file is as follows.\hypertarget{binaryrw_8h_autotoc_md0}{}\doxysubsubsection{\texorpdfstring{File header}{File header}}\label{binaryrw_8h_autotoc_md0}
+\hypertarget{binaryrw_8h_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} Offset \texorpdfstring{$\vert$}{|} Size  \texorpdfstring{$\vert$}{|} Purpose                                                \texorpdfstring{$\vert$}{|}}{| Offset | Size  | Purpose                                                |}}\label{binaryrw_8h_autotoc_md1}
+\texorpdfstring{$\vert$}{|} 0x00 \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} The header field to identify the file is {\ttfamily US} in ASCII \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x02 \texorpdfstring{$\vert$}{|} 3 B \texorpdfstring{$\vert$}{|} File format version number is {\ttfamily 1.\+0} in ASCII \texorpdfstring{$\vert$}{|} \hypertarget{binaryrw_8h_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} 0x05   \texorpdfstring{$\vert$}{|} 8 B   \texorpdfstring{$\vert$}{|} UNIX timestamp of last modification                    \texorpdfstring{$\vert$}{|}}{| 0x05   | 8 B   | UNIX timestamp of last modification                    |}}\label{binaryrw_8h_autotoc_md2}
+\hypertarget{binaryrw_8h_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{US records for individual users}{US records for individual users}}\label{binaryrw_8h_autotoc_md3}
+\hypertarget{binaryrw_8h_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} Offset \texorpdfstring{$\vert$}{|} Size  \texorpdfstring{$\vert$}{|} Purpose                                                \texorpdfstring{$\vert$}{|}}{| Offset | Size  | Purpose                                                |}}\label{binaryrw_8h_autotoc_md4}
+\texorpdfstring{$\vert$}{|} 0x00 \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the user in bytes \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x01 \texorpdfstring{$\vert$}{|} 4 B \texorpdfstring{$\vert$}{|} ID \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x05 \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} Age \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x07 \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the name in bytes SN \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} .... \texorpdfstring{$\vert$}{|} SN B \texorpdfstring{$\vert$}{|} Name \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} .... \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the usernamename in bytes SN \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} .... \texorpdfstring{$\vert$}{|} SUN B \texorpdfstring{$\vert$}{|} Username \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} .... \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the password in bytes SN \texorpdfstring{$\vert$}{|} \hypertarget{binaryrw_8h_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} ....   \texorpdfstring{$\vert$}{|} SUN B \texorpdfstring{$\vert$}{|} Password                                               \texorpdfstring{$\vert$}{|}}{| ....   | SUN B | Password                                               |}}\label{binaryrw_8h_autotoc_md5}
+
+\begin{DoxyParams}{Parameters}
+{\em users} & The Vector of all users.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_file_not_found_corrupted}{File\+Not\+Found\+Corrupted}} & Failure to write to the file. check if it is possible to write to current directory. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{binaryrw_8cpp_aa7c405c0aa8cd27088055f89356b4af7}\label{binaryrw_8cpp_aa7c405c0aa8cd27088055f89356b4af7} 
+\index{binaryrw.cpp@{binaryrw.cpp}!write\_workouts@{write\_workouts}}
+\index{write\_workouts@{write\_workouts}!binaryrw.cpp@{binaryrw.cpp}}
+\doxysubsubsection{\texorpdfstring{write\_workouts()}{write\_workouts()}}
+{\footnotesize\ttfamily void write\+\_\+workouts (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fname,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{works,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+Write a list of workouts into a file according to the format.
+
+The format of the file is as follows.\hypertarget{binaryrw_8h_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{File header}{File header}}\label{binaryrw_8h_autotoc_md12}
+\hypertarget{binaryrw_8h_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} Offset \texorpdfstring{$\vert$}{|} Size  \texorpdfstring{$\vert$}{|} Purpose                                                \texorpdfstring{$\vert$}{|}}{| Offset | Size  | Purpose                                                |}}\label{binaryrw_8h_autotoc_md13}
+\texorpdfstring{$\vert$}{|} 0x00 \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} The header field to identify the file is {\ttfamily WK} in ASCII \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x02 \texorpdfstring{$\vert$}{|} 3 B \texorpdfstring{$\vert$}{|} File format version number is {\ttfamily 1.\+0} in ASCII \texorpdfstring{$\vert$}{|} \hypertarget{binaryrw_8h_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} 0x05   \texorpdfstring{$\vert$}{|} 8 B   \texorpdfstring{$\vert$}{|} UNIX timestamp of last modification                    \texorpdfstring{$\vert$}{|}}{| 0x05   | 8 B   | UNIX timestamp of last modification                    |}}\label{binaryrw_8h_autotoc_md14}
+\hypertarget{binaryrw_8h_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{WK records for individual workouts}{WK records for individual workouts}}\label{binaryrw_8h_autotoc_md15}
+\hypertarget{binaryrw_8h_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} Offset \texorpdfstring{$\vert$}{|} Size  \texorpdfstring{$\vert$}{|} Purpose                                                \texorpdfstring{$\vert$}{|}}{| Offset | Size  | Purpose                                                |}}\label{binaryrw_8h_autotoc_md16}
+\texorpdfstring{$\vert$}{|} 0x00 \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the exercise in bytes \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x01 \texorpdfstring{$\vert$}{|} 4 B \texorpdfstring{$\vert$}{|} \doxylink{class_user}{User} ID \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x05 \texorpdfstring{$\vert$}{|} 4 B \texorpdfstring{$\vert$}{|} ID \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x09 \texorpdfstring{$\vert$}{|} 6 B \texorpdfstring{$\vert$}{|} \doxylink{struct_date}{Date} \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x0F \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} Duration \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x11 \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Completed \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x12 \texorpdfstring{$\vert$}{|} 2 B \texorpdfstring{$\vert$}{|} Calories burnt \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x14 \texorpdfstring{$\vert$}{|} 4 B \texorpdfstring{$\vert$}{|} Difficulty \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} 0x19 \texorpdfstring{$\vert$}{|} 1 B \texorpdfstring{$\vert$}{|} Size of the name in bytes SN \texorpdfstring{$\vert$}{|} \hypertarget{binaryrw_8h_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\vert$}{|} 0x16   \texorpdfstring{$\vert$}{|} SN B  \texorpdfstring{$\vert$}{|} Name                                                   \texorpdfstring{$\vert$}{|}}{| 0x16   | SN B  | Name                                                   |}}\label{binaryrw_8h_autotoc_md17}
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & Directory where to write the file. \\
+\hline
+{\em works} & The list of workouts. \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} id.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_file_not_found_corrupted}{File\+Not\+Found\+Corrupted}} & Failure to write to the file. check if it is possible to write to current directory. \\
+\hline
+\end{DoxyExceptions}

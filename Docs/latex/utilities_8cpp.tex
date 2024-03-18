@@ -1,0 +1,99 @@
+\doxysection{utilities.\+cpp File Reference}
+\hypertarget{utilities_8cpp}{}\label{utilities_8cpp}\index{utilities.cpp@{utilities.cpp}}
+{\ttfamily \#include \"{}utilities.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{utilities_8cpp_a5cd819ba5e86136b08b895f8162cf058}{color\+\_\+outpt}} (const std\+::string \&\&s)
+\begin{DoxyCompactList}\small\item\em Color the output red. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{utilities_8cpp_a95a3e960f4ed329cfbeb54cd4e0d7d1e}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \&d)
+\begin{DoxyCompactList}\small\item\em Overloaded extraction operator to read a Difficulty value from an input stream. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{utilities_8cpp_ad83695815577790ebe692e3d87247bb0}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \&c)
+\begin{DoxyCompactList}\small\item\em Overloaded insertion operator to output Difficulty object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utilities_8cpp_a7077a6cabd326656c76448ff40fbe6f2}{getstring\+Yes\+No}} (bool \&b, std\+::string s)
+\begin{DoxyCompactList}\small\item\em Get the input from user Yes/\+No. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utilities_8cpp_a5cd819ba5e86136b08b895f8162cf058}\label{utilities_8cpp_a5cd819ba5e86136b08b895f8162cf058} 
+\index{utilities.cpp@{utilities.cpp}!color\_outpt@{color\_outpt}}
+\index{color\_outpt@{color\_outpt}!utilities.cpp@{utilities.cpp}}
+\doxysubsubsection{\texorpdfstring{color\_outpt()}{color\_outpt()}}
+{\footnotesize\ttfamily std\+::string color\+\_\+outpt (\begin{DoxyParamCaption}\item[{const std\+::string \&\&}]{s }\end{DoxyParamCaption})}
+
+
+
+Color the output red. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The text to color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String colored red. 
+\end{DoxyReturn}
+\Hypertarget{utilities_8cpp_a7077a6cabd326656c76448ff40fbe6f2}\label{utilities_8cpp_a7077a6cabd326656c76448ff40fbe6f2} 
+\index{utilities.cpp@{utilities.cpp}!getstringYesNo@{getstringYesNo}}
+\index{getstringYesNo@{getstringYesNo}!utilities.cpp@{utilities.cpp}}
+\doxysubsubsection{\texorpdfstring{getstringYesNo()}{getstringYesNo()}}
+{\footnotesize\ttfamily void getstring\+Yes\+No (\begin{DoxyParamCaption}\item[{bool \&}]{input,  }\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+Get the input from user Yes/\+No. 
+
+Checks the user input. Only 1 or 2 is accepted. 1 sets boolean to true, 2 to false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The bool to change. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & gets thrown and caught if the user input is not correct \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{utilities_8cpp_ad83695815577790ebe692e3d87247bb0}\label{utilities_8cpp_ad83695815577790ebe692e3d87247bb0} 
+\index{utilities.cpp@{utilities.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!utilities.cpp@{utilities.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Overloaded insertion operator to output Difficulty object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to write the Difficulty object to. \\
+\hline
+{\em c} & The Difficulty object to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream after writing the Difficulty object. 
+\end{DoxyReturn}
+\Hypertarget{utilities_8cpp_a95a3e960f4ed329cfbeb54cd4e0d7d1e}\label{utilities_8cpp_a95a3e960f4ed329cfbeb54cd4e0d7d1e} 
+\index{utilities.cpp@{utilities.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!utilities.cpp@{utilities.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Overloaded extraction operator to read a Difficulty value from an input stream. 
+
+It also checks the user input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & The input stream to read the Difficulty value from. \\
+\hline
+{\em c} & Reference to the Difficulty object where the value will be stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the input stream after reading the Difficulty value. 
+\end{DoxyReturn}

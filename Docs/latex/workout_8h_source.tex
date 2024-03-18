@@ -1,0 +1,41 @@
+\doxysection{workout.\+h}
+\hypertarget{workout_8h_source}{}\label{workout_8h_source}\mbox{\hyperlink{workout_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WORKOUT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WORKOUT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{date_8h}{date.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utilities_8h}{utilities.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_workout}{Workout}}\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_workout_a4aeeee4389696f5351328c74f0571e5d}{workout\_count}};}
+\DoxyCodeLine{00030\ \ \ \ \ int32\_t\ \mbox{\hyperlink{struct_workout_a70ee1873d6b37497621750ca2347403f}{user\_id}};}
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_workout_afc132e5a4542244fb460f49c219de354}{name}};}
+\DoxyCodeLine{00034\ \ \ \ \ int32\_t\ \mbox{\hyperlink{struct_workout_af0006256c5ffb3e541f755857a24e937}{id}};}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{struct_date}{Date}}\ \mbox{\hyperlink{struct_workout_ac9e3d20e2b9ad0207271bb0eb3bcaa56}{date}};}
+\DoxyCodeLine{00038\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_workout_abab7c683e1e2b00ffbfbd1c37d0b88ee}{duration}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_workout_adaa4a6e8f91532bf6d64ccfb2add0f06}{completed}};}
+\DoxyCodeLine{00042\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_workout_a537a104ec6d5d51061d827671b62a3e9}{calories\_burnt}};}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}\ \mbox{\hyperlink{struct_workout_aa71a90cffcdd7da36ab482575929a588}{difficulty}};}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{struct_workout_a43f00ac1a38599fc4684461794254a0e}{Workout}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{struct_workout_a43f00ac1a38599fc4684461794254a0e}{Workout}}(int32\_t\ us\_id);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_workout_ae765a5f1c23f05fb27877d3f446a8ba5}{operator\ ==\ }}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ t)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_workout_adc4e0c4708361de0b80abb32cda2acc0}{operator\ >\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_workout}{Workout}}\&\ w)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_workout_a0b894c714f369db8150544ecb18c5454}{operator\ <\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_workout}{Workout}}\&\ w)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_workout_a5159798e68cbafc72155b64b652c9ead}{compareByCal}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_workout}{Workout}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_workout_a3b67b1ef8d5f2c344a6f0dfb70660da0}{compareByDiff}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_workout}{Workout}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_workout_aa29c71430ab94d69995d25155810ffb4}{compareByDurat}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_workout}{Workout}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_workout_a2a4f725080b4be2d09e736bce77d009a}{compareByName}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_workout}{Workout}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00116\ std::ostream\&\ \mbox{\hyperlink{workout_8h_a96982777031f8050901e2c34a954c277}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_workout}{Workout}}\&\ w);}
+\DoxyCodeLine{00123\ std::ostream\&\ \mbox{\hyperlink{workout_8h_a96982777031f8050901e2c34a954c277}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ std::vector<Workout>\&\ work);}
+\DoxyCodeLine{00130\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{workout_8h_ae772719eb184c1879540593e48fadeca}{getWorkouts}}(std::vector<Workout>\&\ w,\ int32\_t\&\ us\_id);}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !WORKOUT\_H}}
+
+\end{DoxyCode}

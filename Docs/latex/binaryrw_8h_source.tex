@@ -1,0 +1,40 @@
+\doxysection{binaryrw.\+h}
+\hypertarget{binaryrw_8h_source}{}\label{binaryrw_8h_source}\mbox{\hyperlink{binaryrw_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BINARYRW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BINARYRW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_training_8h}{Training.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{user_8h}{user.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_file_not_found_corrupted}{FileNotFoundCorrupted}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{binaryrw_8h_a223c2e72ee7c2cfe75b080f738bc30cb}{write\_users}}(std::vector<User>\ \&users);}
+\DoxyCodeLine{00059\ std::vector<User>\ \mbox{\hyperlink{binaryrw_8h_a36b31c63963a38d4714dc9b80ca7387b}{read\_users}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{binaryrw_8h_a467b04c9eabb9ab830270e88874aaa92}{save\_data}}(\textcolor{keyword}{const}\ std::vector<Exercise>\ \&exs,\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Workout>\ \&works,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Training>\ \&trs,\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{binaryrw_8h_a55721636cf12d06e22bf222978cf081d}{read\_data}}(std::vector<Exercise>\ \&allexercises,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Workout>\ \&works,\ std::vector<Training>\ \&trs,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00134\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{binaryrw_8h_aebf9a8523d0a0e3d5eb78c7b440072c4}{write\_exs}}(\textcolor{keyword}{const}\ std::string\ \&fname,\ \textcolor{keyword}{const}\ std::vector<Exercise>\ \&exs,\ }
+\DoxyCodeLine{00135\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00144\ std::vector<Exercise>\ \mbox{\hyperlink{binaryrw_8h_a86b4873a30e92b197291a710e35927e6}{read\_exs}}(\textcolor{keyword}{const}\ std::string\ \&fname,\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{binaryrw_8h_aa7c405c0aa8cd27088055f89356b4af7}{write\_workouts}}(\textcolor{keyword}{const}\ std::string\&\ fname,\ std::vector<Workout>\ \&works,\ }
+\DoxyCodeLine{00184\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00193\ std::vector<Workout>\ \mbox{\hyperlink{binaryrw_8h_a85cf92c0c1f8f7dae18195e1a399c02c}{read\_workouts}}(\textcolor{keyword}{const}\ std::string\ \&fname,\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00224\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{binaryrw_8h_ae81bd21cb3bf0b0bd0fa6bfeb87dd781}{write\_trainings}}(\textcolor{keyword}{const}\ std::string\ \&fname,\ \textcolor{keyword}{const}\ std::vector<Training>\ \&trs,\ }
+\DoxyCodeLine{00225\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00234\ std::vector<Training>\ \mbox{\hyperlink{binaryrw_8h_a7b56f99c47dc43eb82b13c225800d8d2}{read\_trainings}}(\textcolor{keyword}{const}\ std::string\ \&fname,\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !BINARYRW\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,304 @@
+\doxysection{Workout Struct Reference}
+\hypertarget{struct_workout}{}\label{struct_workout}\index{Workout@{Workout}}
+
+
+{\ttfamily \#include $<$workout.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_workout_a43f00ac1a38599fc4684461794254a0e}{Workout}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_workout_a626f677f50eef1dc4bc8ae7a4db30e57}{Workout}} (int32\+\_\+t us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_workout_ae765a5f1c23f05fb27877d3f446a8ba5}{operator==}} (const int \&t) const
+\begin{DoxyCompactList}\small\item\em Equivalence overloading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_workout_adc4e0c4708361de0b80abb32cda2acc0}{operator$>$}} (const \mbox{\hyperlink{struct_workout}{Workout}} \&w) const
+\begin{DoxyCompactList}\small\item\em Greater-\/than overloading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_workout_a0b894c714f369db8150544ecb18c5454}{operator$<$}} (const \mbox{\hyperlink{struct_workout}{Workout}} \&w) const
+\begin{DoxyCompactList}\small\item\em Less-\/than overloading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_workout_a5159798e68cbafc72155b64b652c9ead}{compare\+By\+Cal}} (const \mbox{\hyperlink{struct_workout}{Workout}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare Workoutse objects by calories burnt (which burns more). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_workout_a3b67b1ef8d5f2c344a6f0dfb70660da0}{compare\+By\+Diff}} (const \mbox{\hyperlink{struct_workout}{Workout}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare Workoutse objects by difficulty (which is harder). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_workout_aa29c71430ab94d69995d25155810ffb4}{compare\+By\+Durat}} (const \mbox{\hyperlink{struct_workout}{Workout}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare Workoutse objects by duration (which is longer) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_workout_a2a4f725080b4be2d09e736bce77d009a}{compare\+By\+Name}} (const \mbox{\hyperlink{struct_workout}{Workout}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare Workoutse objects by name (alphabetically). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_workout_a70ee1873d6b37497621750ca2347403f}{user\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em ID of the user who has this workout. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_workout_afc132e5a4542244fb460f49c219de354}{name}}
+\begin{DoxyCompactList}\small\item\em Name. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{struct_workout_af0006256c5ffb3e541f755857a24e937}{id}}
+\begin{DoxyCompactList}\small\item\em ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_date}{Date}} \mbox{\hyperlink{struct_workout_ac9e3d20e2b9ad0207271bb0eb3bcaa56}{date}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_date}{Date}. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{struct_workout_abab7c683e1e2b00ffbfbd1c37d0b88ee}{duration}}
+\begin{DoxyCompactList}\small\item\em Duration. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_workout_adaa4a6e8f91532bf6d64ccfb2add0f06}{completed}}
+\begin{DoxyCompactList}\small\item\em Status -\/ completed or not. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{struct_workout_a537a104ec6d5d51061d827671b62a3e9}{calories\+\_\+burnt}}
+\begin{DoxyCompactList}\small\item\em Number of calories the workout burns. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \mbox{\hyperlink{struct_workout_aa71a90cffcdd7da36ab482575929a588}{difficulty}}
+\begin{DoxyCompactList}\small\item\em enum Difficulty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{struct_workout_a4aeeee4389696f5351328c74f0571e5d}{workout\+\_\+count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of \doxylink{struct_workout}{Workout} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_workout_a43f00ac1a38599fc4684461794254a0e}\label{struct_workout_a43f00ac1a38599fc4684461794254a0e} 
+\index{Workout@{Workout}!Workout@{Workout}}
+\index{Workout@{Workout}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{Workout()}{Workout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Workout\+::\+Workout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates a new \doxylink{struct_workout}{Workout} object with id equal to number of objects incremented by 1.
+
+Duration, completed and calories\+\_\+burnt are initialized to 0, difficulty set to UNKNOWN. \Hypertarget{struct_workout_a626f677f50eef1dc4bc8ae7a4db30e57}\label{struct_workout_a626f677f50eef1dc4bc8ae7a4db30e57} 
+\index{Workout@{Workout}!Workout@{Workout}}
+\index{Workout@{Workout}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{Workout()}{Workout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Workout\+::\+Workout (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new \doxylink{struct_workout}{Workout} object with id equal to number of objects incremented by 1. Duration, completed and calories\+\_\+burnt are initialized to 0, difficulty set to UNKNOWN user\+\_\+id is set to the id of the current user. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_workout_a5159798e68cbafc72155b64b652c9ead}\label{struct_workout_a5159798e68cbafc72155b64b652c9ead} 
+\index{Workout@{Workout}!compareByCal@{compareByCal}}
+\index{compareByCal@{compareByCal}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{compareByCal()}{compareByCal()}}
+{\footnotesize\ttfamily bool Workout\+::compare\+By\+Cal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_workout}{Workout}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Compare Workoutse objects by calories burnt (which burns more). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{struct_workout}{Workout} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_workout}{Workout} is greater than other \doxylink{struct_workout}{Workout}. 
+\end{DoxyReturn}
+\Hypertarget{struct_workout_a3b67b1ef8d5f2c344a6f0dfb70660da0}\label{struct_workout_a3b67b1ef8d5f2c344a6f0dfb70660da0} 
+\index{Workout@{Workout}!compareByDiff@{compareByDiff}}
+\index{compareByDiff@{compareByDiff}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{compareByDiff()}{compareByDiff()}}
+{\footnotesize\ttfamily bool Workout\+::compare\+By\+Diff (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_workout}{Workout}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Compare Workoutse objects by difficulty (which is harder). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{struct_workout}{Workout} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_workout}{Workout} is greater than other \doxylink{struct_workout}{Workout}. 
+\end{DoxyReturn}
+\Hypertarget{struct_workout_aa29c71430ab94d69995d25155810ffb4}\label{struct_workout_aa29c71430ab94d69995d25155810ffb4} 
+\index{Workout@{Workout}!compareByDurat@{compareByDurat}}
+\index{compareByDurat@{compareByDurat}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{compareByDurat()}{compareByDurat()}}
+{\footnotesize\ttfamily bool Workout\+::compare\+By\+Durat (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_workout}{Workout}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Compare Workoutse objects by duration (which is longer) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{struct_workout}{Workout} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_workout}{Workout} is greater than other \doxylink{struct_workout}{Workout}. 
+\end{DoxyReturn}
+\Hypertarget{struct_workout_a2a4f725080b4be2d09e736bce77d009a}\label{struct_workout_a2a4f725080b4be2d09e736bce77d009a} 
+\index{Workout@{Workout}!compareByName@{compareByName}}
+\index{compareByName@{compareByName}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{compareByName()}{compareByName()}}
+{\footnotesize\ttfamily bool Workout\+::compare\+By\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_workout}{Workout}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Compare Workoutse objects by name (alphabetically). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{struct_workout}{Workout} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_workout}{Workout} is greater than other \doxylink{struct_workout}{Workout}. 
+\end{DoxyReturn}
+\Hypertarget{struct_workout_a0b894c714f369db8150544ecb18c5454}\label{struct_workout_a0b894c714f369db8150544ecb18c5454} 
+\index{Workout@{Workout}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Workout\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_workout}{Workout}} \&}]{w }\end{DoxyParamCaption}) const}
+
+
+
+Less-\/than overloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{struct_workout}{Workout} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_workout}{Workout} is less than other \doxylink{struct_workout}{Workout}. 
+\end{DoxyReturn}
+\Hypertarget{struct_workout_ae765a5f1c23f05fb27877d3f446a8ba5}\label{struct_workout_ae765a5f1c23f05fb27877d3f446a8ba5} 
+\index{Workout@{Workout}!operator==@{operator==}}
+\index{operator==@{operator==}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Workout\+::operator== (\begin{DoxyParamCaption}\item[{const int \&}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Equivalence overloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_workout}{Workout} id is qual to the t. 
+\end{DoxyReturn}
+\Hypertarget{struct_workout_adc4e0c4708361de0b80abb32cda2acc0}\label{struct_workout_adc4e0c4708361de0b80abb32cda2acc0} 
+\index{Workout@{Workout}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Workout\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_workout}{Workout}} \&}]{w }\end{DoxyParamCaption}) const}
+
+
+
+Greater-\/than overloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{struct_workout}{Workout} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_workout}{Workout} id is qual to the t. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_workout_a537a104ec6d5d51061d827671b62a3e9}\label{struct_workout_a537a104ec6d5d51061d827671b62a3e9} 
+\index{Workout@{Workout}!calories\_burnt@{calories\_burnt}}
+\index{calories\_burnt@{calories\_burnt}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{calories\_burnt}{calories\_burnt}}
+{\footnotesize\ttfamily int16\+\_\+t Workout\+::calories\+\_\+burnt}
+
+
+
+Number of calories the workout burns. 
+
+\Hypertarget{struct_workout_adaa4a6e8f91532bf6d64ccfb2add0f06}\label{struct_workout_adaa4a6e8f91532bf6d64ccfb2add0f06} 
+\index{Workout@{Workout}!completed@{completed}}
+\index{completed@{completed}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{completed}{completed}}
+{\footnotesize\ttfamily bool Workout\+::completed}
+
+
+
+Status -\/ completed or not. 
+
+\Hypertarget{struct_workout_ac9e3d20e2b9ad0207271bb0eb3bcaa56}\label{struct_workout_ac9e3d20e2b9ad0207271bb0eb3bcaa56} 
+\index{Workout@{Workout}!date@{date}}
+\index{date@{date}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{date}{date}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_date}{Date}} Workout\+::date}
+
+
+
+\doxylink{struct_date}{Date}. 
+
+\Hypertarget{struct_workout_aa71a90cffcdd7da36ab482575929a588}\label{struct_workout_aa71a90cffcdd7da36ab482575929a588} 
+\index{Workout@{Workout}!difficulty@{difficulty}}
+\index{difficulty@{difficulty}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{difficulty}{difficulty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} Workout\+::difficulty}
+
+
+
+enum Difficulty. 
+
+\Hypertarget{struct_workout_abab7c683e1e2b00ffbfbd1c37d0b88ee}\label{struct_workout_abab7c683e1e2b00ffbfbd1c37d0b88ee} 
+\index{Workout@{Workout}!duration@{duration}}
+\index{duration@{duration}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily int16\+\_\+t Workout\+::duration}
+
+
+
+Duration. 
+
+\Hypertarget{struct_workout_af0006256c5ffb3e541f755857a24e937}\label{struct_workout_af0006256c5ffb3e541f755857a24e937} 
+\index{Workout@{Workout}!id@{id}}
+\index{id@{id}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int32\+\_\+t Workout\+::id}
+
+
+
+ID. 
+
+\Hypertarget{struct_workout_afc132e5a4542244fb460f49c219de354}\label{struct_workout_afc132e5a4542244fb460f49c219de354} 
+\index{Workout@{Workout}!name@{name}}
+\index{name@{name}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Workout\+::name}
+
+
+
+Name. 
+
+\Hypertarget{struct_workout_a70ee1873d6b37497621750ca2347403f}\label{struct_workout_a70ee1873d6b37497621750ca2347403f} 
+\index{Workout@{Workout}!user\_id@{user\_id}}
+\index{user\_id@{user\_id}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{user\_id}{user\_id}}
+{\footnotesize\ttfamily int32\+\_\+t Workout\+::user\+\_\+id}
+
+
+
+ID of the user who has this workout. 
+
+\Hypertarget{struct_workout_a4aeeee4389696f5351328c74f0571e5d}\label{struct_workout_a4aeeee4389696f5351328c74f0571e5d} 
+\index{Workout@{Workout}!workout\_count@{workout\_count}}
+\index{workout\_count@{workout\_count}!Workout@{Workout}}
+\doxysubsubsection{\texorpdfstring{workout\_count}{workout\_count}}
+{\footnotesize\ttfamily int Workout\+::workout\+\_\+count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of \doxylink{struct_workout}{Workout} objects. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{workout_8h}{workout.\+h}}\item 
+\mbox{\hyperlink{workout_8cpp}{workout.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,261 @@
+\doxysection{utilities.\+h File Reference}
+\hypertarget{utilities_8h}{}\label{utilities_8h}\index{utilities.h@{utilities.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \"{}fort.\+hpp\"{}}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \{ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a6e5affbf5c08fef0e28c094856f94627}{EASY}}
+, \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83ac87f3be66ffc3c0d4249f1c2cc5f3cce}{MEDIUM}}
+, \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a7c144eae2e08db14c82e376603cc01f4}{HARD}}
+, \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a696b031073e74bf2cb98e5ef201d4aa3}{UNKNOWN}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the difficulty levels of exercises/workouts. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \{ \newline
+\mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a002101f8725e5c78d9f30d87f3fa4c87}{ALPHA}}
+, \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103ab718adec73e04ce3ec720dd11a06a308}{ID}}
+, \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103aa2e1ec2dd3d8195d238c5494f0ac5578}{DIFF}}
+, \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103aaee8071d1b09ae34698172cf44aaadfc}{DURAT}}
+, \newline
+\mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a70920dc57a700735662d48026ff7a88a}{CALOR}}
+, \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a633a6c7a6b9958f8174250094daf1e6a}{DATE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Sorting conditions which determine the output of workouts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{utilities_8h_a5cd819ba5e86136b08b895f8162cf058}{color\+\_\+outpt}} (const std\+::string \&\&s)
+\begin{DoxyCompactList}\small\item\em Color the output red. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{utilities_8h_a252f064ff3de336f2ee510f9a2b4b7c1}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \&c)
+\begin{DoxyCompactList}\small\item\em Overloaded extraction operator to read a Difficulty value from an input stream. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{utilities_8h_ad83695815577790ebe692e3d87247bb0}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \&c)
+\begin{DoxyCompactList}\small\item\em Overloaded insertion operator to output Difficulty object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utilities_8h_a026f70ec3902443d3799cf1b2384dd63}{getstring\+Yes\+No}} (bool \&input, std\+::string s)
+\begin{DoxyCompactList}\small\item\em Get the input from user Yes/\+No. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename L $>$ }\\int \mbox{\hyperlink{utilities_8h_a07d11a656de49114733692d3e4aff062}{get\+ID}} (const std\+::vector$<$ L $>$ \&objects, const std\+::string \&\&s)
+\begin{DoxyCompactList}\small\item\em Get the ID of workout/exercise from user. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{utilities_8h_ae321c09d6954d7a989978802233529ca}{get\+Input}} (T \&input, const std\+::string \&\&s=\"{}Enter an integer value\+: \"{})
+\begin{DoxyCompactList}\small\item\em Gets string or integer input from user and validates it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}\label{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83} 
+\index{utilities.h@{utilities.h}!Difficulty@{Difficulty}}
+\index{Difficulty@{Difficulty}!utilities.h@{utilities.h}}
+\doxysubsubsection{\texorpdfstring{Difficulty}{Difficulty}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents the difficulty levels of exercises/workouts. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EASY@{EASY}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!EASY@{EASY}}}\Hypertarget{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a6e5affbf5c08fef0e28c094856f94627}\label{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a6e5affbf5c08fef0e28c094856f94627} 
+EASY&Easy difficulty level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEDIUM@{MEDIUM}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!MEDIUM@{MEDIUM}}}\Hypertarget{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83ac87f3be66ffc3c0d4249f1c2cc5f3cce}\label{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83ac87f3be66ffc3c0d4249f1c2cc5f3cce} 
+MEDIUM&Medium difficulty level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HARD@{HARD}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!HARD@{HARD}}}\Hypertarget{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a7c144eae2e08db14c82e376603cc01f4}\label{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a7c144eae2e08db14c82e376603cc01f4} 
+HARD&Hard difficulty level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKNOWN@{UNKNOWN}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!UNKNOWN@{UNKNOWN}}}\Hypertarget{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a696b031073e74bf2cb98e5ef201d4aa3}\label{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a696b031073e74bf2cb98e5ef201d4aa3} 
+UNKNOWN&Unknown difficulty level. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}\label{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103} 
+\index{utilities.h@{utilities.h}!Sortcon@{Sortcon}}
+\index{Sortcon@{Sortcon}!utilities.h@{utilities.h}}
+\doxysubsubsection{\texorpdfstring{Sortcon}{Sortcon}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Sorting conditions which determine the output of workouts. 
+
+Workouts are sorted and then outputted according to one of the sorting conditions.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{functions_8cpp_ac954cfc0cba8102e82dfa1f767529d3b}{print\+Workouts(std\+::vector$<$\+Workout$>$\& allworkouts,  std\+::vector$<$\+Exercise$>$\& allexercises, std\+::vector$<$\+Training$>$\& trainings,  \+Sortcon sc)} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALPHA@{ALPHA}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!ALPHA@{ALPHA}}}\Hypertarget{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a002101f8725e5c78d9f30d87f3fa4c87}\label{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a002101f8725e5c78d9f30d87f3fa4c87} 
+ALPHA&Sort alphabetically. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ID@{ID}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!ID@{ID}}}\Hypertarget{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103ab718adec73e04ce3ec720dd11a06a308}\label{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103ab718adec73e04ce3ec720dd11a06a308} 
+ID&Sort by ID. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIFF@{DIFF}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!DIFF@{DIFF}}}\Hypertarget{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103aa2e1ec2dd3d8195d238c5494f0ac5578}\label{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103aa2e1ec2dd3d8195d238c5494f0ac5578} 
+DIFF&Sort by difficulty. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DURAT@{DURAT}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!DURAT@{DURAT}}}\Hypertarget{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103aaee8071d1b09ae34698172cf44aaadfc}\label{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103aaee8071d1b09ae34698172cf44aaadfc} 
+DURAT&Sort by duration. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CALOR@{CALOR}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!CALOR@{CALOR}}}\Hypertarget{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a70920dc57a700735662d48026ff7a88a}\label{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a70920dc57a700735662d48026ff7a88a} 
+CALOR&Sort by calories burnt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DATE@{DATE}!utilities.h@{utilities.h}}\index{utilities.h@{utilities.h}!DATE@{DATE}}}\Hypertarget{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a633a6c7a6b9958f8174250094daf1e6a}\label{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a633a6c7a6b9958f8174250094daf1e6a} 
+DATE&Sort by date. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utilities_8h_a5cd819ba5e86136b08b895f8162cf058}\label{utilities_8h_a5cd819ba5e86136b08b895f8162cf058} 
+\index{utilities.h@{utilities.h}!color\_outpt@{color\_outpt}}
+\index{color\_outpt@{color\_outpt}!utilities.h@{utilities.h}}
+\doxysubsubsection{\texorpdfstring{color\_outpt()}{color\_outpt()}}
+{\footnotesize\ttfamily std\+::string color\+\_\+outpt (\begin{DoxyParamCaption}\item[{const std\+::string \&\&}]{s }\end{DoxyParamCaption})}
+
+
+
+Color the output red. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The text to color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String colored red. 
+\end{DoxyReturn}
+\Hypertarget{utilities_8h_a07d11a656de49114733692d3e4aff062}\label{utilities_8h_a07d11a656de49114733692d3e4aff062} 
+\index{utilities.h@{utilities.h}!getID@{getID}}
+\index{getID@{getID}!utilities.h@{utilities.h}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily template$<$typename L $>$ \\
+int get\+ID (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ L $>$ \&}]{objects,  }\item[{const std\+::string \&\&}]{s }\end{DoxyParamCaption})}
+
+
+
+Get the ID of workout/exercise from user. 
+
+Checks the user input. Only positive integers accepted. Checks if the ID of object exists, if not asks for it again or allows to exit.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em objects} & The vector of either exercises or workouts. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The prompt to output. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & gets thrown and caught if the user input is not correct. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+ID of the object 
+\end{DoxyReturn}
+\Hypertarget{utilities_8h_ae321c09d6954d7a989978802233529ca}\label{utilities_8h_ae321c09d6954d7a989978802233529ca} 
+\index{utilities.h@{utilities.h}!getInput@{getInput}}
+\index{getInput@{getInput}!utilities.h@{utilities.h}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void get\+Input (\begin{DoxyParamCaption}\item[{T \&}]{input,  }\item[{const std\+::string \&\&}]{s = {\ttfamily \"{}Enter~an~integer~value\+:~\"{}} }\end{DoxyParamCaption})}
+
+
+
+Gets string or integer input from user and validates it. 
+
+If the input is a string the function check whether it is too long as well as removes all spaces before and after the string, as well as any repetitive spaces between the words. If the input is an integer the function checks whether it is negative, contains non-\/numbers or input fails due to overflow or other reasons. If so, it asks for the input again until it is correct.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em input} & Template parameter -\/ integer or string. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The prompt to output. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & gets thrown and caught if the user input is not correct \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{utilities_8h_a026f70ec3902443d3799cf1b2384dd63}\label{utilities_8h_a026f70ec3902443d3799cf1b2384dd63} 
+\index{utilities.h@{utilities.h}!getstringYesNo@{getstringYesNo}}
+\index{getstringYesNo@{getstringYesNo}!utilities.h@{utilities.h}}
+\doxysubsubsection{\texorpdfstring{getstringYesNo()}{getstringYesNo()}}
+{\footnotesize\ttfamily void getstring\+Yes\+No (\begin{DoxyParamCaption}\item[{bool \&}]{input,  }\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+Get the input from user Yes/\+No. 
+
+Checks the user input. Only 1 or 2 is accepted. 1 sets boolean to true, 2 to false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The bool to change. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & gets thrown and caught if the user input is not correct \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{utilities_8h_ad83695815577790ebe692e3d87247bb0}\label{utilities_8h_ad83695815577790ebe692e3d87247bb0} 
+\index{utilities.h@{utilities.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!utilities.h@{utilities.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Overloaded insertion operator to output Difficulty object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to write the Difficulty object to. \\
+\hline
+{\em c} & The Difficulty object to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream after writing the Difficulty object. 
+\end{DoxyReturn}
+\Hypertarget{utilities_8h_a252f064ff3de336f2ee510f9a2b4b7c1}\label{utilities_8h_a252f064ff3de336f2ee510f9a2b4b7c1} 
+\index{utilities.h@{utilities.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!utilities.h@{utilities.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Overloaded extraction operator to read a Difficulty value from an input stream. 
+
+It also checks the user input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & The input stream to read the Difficulty value from. \\
+\hline
+{\em c} & Reference to the Difficulty object where the value will be stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the input stream after reading the Difficulty value. 
+\end{DoxyReturn}

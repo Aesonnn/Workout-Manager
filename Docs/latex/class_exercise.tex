@@ -1,0 +1,255 @@
+\doxysection{Exercise Class Reference}
+\hypertarget{class_exercise}{}\label{class_exercise}\index{Exercise@{Exercise}}
+
+
+Represents an exercise with its properties.  
+
+
+
+
+{\ttfamily \#include $<$exercise.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_exercise_a9707094804f79ebc6aeaa597600db682}{Exercise}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_exercise_ab0c7d087f919790d51ea7ef910970809}{Exercise}} (std\+::string n, int16\+\_\+t s, int16\+\_\+t r, \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} diff)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_exercise_ac2c9b4ba18e8c4a954eb90688d2b29ea}{operator==}} (const int \&t) const
+\begin{DoxyCompactList}\small\item\em Equivalence overloading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_exercise_a06725bad4912e978d1e10e0c7d90be66}{compare\+By\+Diff}} (const \mbox{\hyperlink{class_exercise}{Exercise}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare \doxylink{class_exercise}{Exercise} objects by difficulty (which is harder) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_exercise_a33c898be2f871d8b55101c9edf7d16d4}{compare\+By\+Name}} (const \mbox{\hyperlink{class_exercise}{Exercise}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare \doxylink{class_exercise}{Exercise} objects by name (alphabetically). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_exercise_a3123262631649f25f38ac3756a28e821}{name}}
+\begin{DoxyCompactList}\small\item\em Name. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_exercise_a86cb74695fc82921f4a24cc6404b4380}{id}}
+\begin{DoxyCompactList}\small\item\em ID. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{class_exercise_adaf7ddb9e5113441dd65a50b229fee61}{sets}}
+\begin{DoxyCompactList}\small\item\em Number of sets. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{class_exercise_a162dc5a43958e111b011b0a5b8a60313}{reps}}
+\begin{DoxyCompactList}\small\item\em Number of reps. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \mbox{\hyperlink{class_exercise_a4254f77a9ab88e4d0e0cdb862036e8a6}{difficulty}}
+\begin{DoxyCompactList}\small\item\em enum Difficulty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_exercise_a590a6a176b505009db696303ca3e476f}{exercise\+\_\+count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of \doxylink{class_exercise}{Exercise} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an exercise with its properties. 
+
+Represents a workout with its properties.
+
+
+\begin{DoxyParams}{Parameters}
+{\em exercise\+\_\+count} & \\
+\hline
+{\em name} & \\
+\hline
+{\em id} & \\
+\hline
+{\em sets} & \\
+\hline
+{\em reps} & \\
+\hline
+{\em difficulty} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty} enum
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em workout\+\_\+count} & \\
+\hline
+{\em user\+\_\+id} & \\
+\hline
+{\em name} & \\
+\hline
+{\em id} & \\
+\hline
+{\em date} & \\
+\hline
+{\em duration} & \\
+\hline
+{\em completed} & \\
+\hline
+{\em calories\+\_\+burnt} & \\
+\hline
+{\em difficulty} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty} enum 
+
+\doxylink{struct_date}{Date} class 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_exercise_a9707094804f79ebc6aeaa597600db682}\label{class_exercise_a9707094804f79ebc6aeaa597600db682} 
+\index{Exercise@{Exercise}!Exercise@{Exercise}}
+\index{Exercise@{Exercise}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{Exercise()}{Exercise()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Exercise\+::\+Exercise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates a new \doxylink{class_exercise}{Exercise} object with id equal to number of objects incremented by 1 . Sets, reps are initialized to 0, difficulty set to UNKNOWN \Hypertarget{class_exercise_ab0c7d087f919790d51ea7ef910970809}\label{class_exercise_ab0c7d087f919790d51ea7ef910970809} 
+\index{Exercise@{Exercise}!Exercise@{Exercise}}
+\index{Exercise@{Exercise}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{Exercise()}{Exercise()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Exercise\+::\+Exercise (\begin{DoxyParamCaption}\item[{std\+::string}]{n,  }\item[{int16\+\_\+t}]{s,  }\item[{int16\+\_\+t}]{r,  }\item[{\mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}}]{diff }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new \doxylink{class_exercise}{Exercise} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Name of exercise. \\
+\hline
+{\em s} & Number of sets in exercise. \\
+\hline
+{\em r} & Number of reps in exercise. \\
+\hline
+{\em diff} & The \doxylink{class_exercise}{Exercise} difficulty. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_exercise_a06725bad4912e978d1e10e0c7d90be66}\label{class_exercise_a06725bad4912e978d1e10e0c7d90be66} 
+\index{Exercise@{Exercise}!compareByDiff@{compareByDiff}}
+\index{compareByDiff@{compareByDiff}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{compareByDiff()}{compareByDiff()}}
+{\footnotesize\ttfamily bool Exercise\+::compare\+By\+Diff (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_exercise}{Exercise}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Compare \doxylink{class_exercise}{Exercise} objects by difficulty (which is harder) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_exercise}{Exercise} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{class_exercise}{Exercise} is greater than other \doxylink{class_exercise}{Exercise}. 
+\end{DoxyReturn}
+\Hypertarget{class_exercise_a33c898be2f871d8b55101c9edf7d16d4}\label{class_exercise_a33c898be2f871d8b55101c9edf7d16d4} 
+\index{Exercise@{Exercise}!compareByName@{compareByName}}
+\index{compareByName@{compareByName}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{compareByName()}{compareByName()}}
+{\footnotesize\ttfamily bool Exercise\+::compare\+By\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_exercise}{Exercise}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Compare \doxylink{class_exercise}{Exercise} objects by name (alphabetically). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_exercise}{Exercise} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{class_exercise}{Exercise} is less than other \doxylink{class_exercise}{Exercise}. 
+\end{DoxyReturn}
+\Hypertarget{class_exercise_ac2c9b4ba18e8c4a954eb90688d2b29ea}\label{class_exercise_ac2c9b4ba18e8c4a954eb90688d2b29ea} 
+\index{Exercise@{Exercise}!operator==@{operator==}}
+\index{operator==@{operator==}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Exercise\+::operator== (\begin{DoxyParamCaption}\item[{const int \&}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Equivalence overloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{class_exercise}{Exercise} id is qual to the t. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_exercise_a4254f77a9ab88e4d0e0cdb862036e8a6}\label{class_exercise_a4254f77a9ab88e4d0e0cdb862036e8a6} 
+\index{Exercise@{Exercise}!difficulty@{difficulty}}
+\index{difficulty@{difficulty}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{difficulty}{difficulty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} Exercise\+::difficulty}
+
+
+
+enum Difficulty. 
+
+\Hypertarget{class_exercise_a590a6a176b505009db696303ca3e476f}\label{class_exercise_a590a6a176b505009db696303ca3e476f} 
+\index{Exercise@{Exercise}!exercise\_count@{exercise\_count}}
+\index{exercise\_count@{exercise\_count}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{exercise\_count}{exercise\_count}}
+{\footnotesize\ttfamily int Exercise\+::exercise\+\_\+count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of \doxylink{class_exercise}{Exercise} objects. 
+
+\Hypertarget{class_exercise_a86cb74695fc82921f4a24cc6404b4380}\label{class_exercise_a86cb74695fc82921f4a24cc6404b4380} 
+\index{Exercise@{Exercise}!id@{id}}
+\index{id@{id}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int32\+\_\+t Exercise\+::id}
+
+
+
+ID. 
+
+\Hypertarget{class_exercise_a3123262631649f25f38ac3756a28e821}\label{class_exercise_a3123262631649f25f38ac3756a28e821} 
+\index{Exercise@{Exercise}!name@{name}}
+\index{name@{name}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Exercise\+::name}
+
+
+
+Name. 
+
+\Hypertarget{class_exercise_a162dc5a43958e111b011b0a5b8a60313}\label{class_exercise_a162dc5a43958e111b011b0a5b8a60313} 
+\index{Exercise@{Exercise}!reps@{reps}}
+\index{reps@{reps}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{reps}{reps}}
+{\footnotesize\ttfamily int16\+\_\+t Exercise\+::reps}
+
+
+
+Number of reps. 
+
+\Hypertarget{class_exercise_adaf7ddb9e5113441dd65a50b229fee61}\label{class_exercise_adaf7ddb9e5113441dd65a50b229fee61} 
+\index{Exercise@{Exercise}!sets@{sets}}
+\index{sets@{sets}!Exercise@{Exercise}}
+\doxysubsubsection{\texorpdfstring{sets}{sets}}
+{\footnotesize\ttfamily int16\+\_\+t Exercise\+::sets}
+
+
+
+Number of sets. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{exercise_8h}{exercise.\+h}}\item 
+\mbox{\hyperlink{exercise_8cpp}{exercise.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['pmenuinput_0',['pmenuinput',['../functions_8cpp.html#acbb7fddf762e06ead9e501d4bfe1cdea',1,'pmenuinput(int &amp;logsign):&#160;functions.cpp'],['../functions_8h.html#acbb7fddf762e06ead9e501d4bfe1cdea',1,'pmenuinput(int &amp;logsign):&#160;functions.cpp']]],
+  ['print_5ffiltr_5fw_1',['print_filtr_w',['../functions_8cpp.html#a5f1a26094f0ef21c2d6e6907daceb2d2',1,'print_filtr_w(std::vector&lt; Workout &gt; &amp;work, std::vector&lt; Exercise &gt; &amp;exer, std::vector&lt; Training &gt; &amp;filtered_trainings):&#160;functions.cpp'],['../functions_8h.html#a5f1a26094f0ef21c2d6e6907daceb2d2',1,'print_filtr_w(std::vector&lt; Workout &gt; &amp;work, std::vector&lt; Exercise &gt; &amp;exer, std::vector&lt; Training &gt; &amp;filtered_trainings):&#160;functions.cpp']]],
+  ['printworkouts_2',['printWorkouts',['../functions_8cpp.html#ac954cfc0cba8102e82dfa1f767529d3b',1,'printWorkouts(std::vector&lt; Workout &gt; &amp;allworkouts, std::vector&lt; Exercise &gt; &amp;allexercises, std::vector&lt; Training &gt; &amp;trainings, const Sortcon sc):&#160;functions.cpp'],['../functions_8h.html#a6f90d40c4ccf9296a939695dbd5a88a8',1,'printWorkouts(std::vector&lt; Workout &gt; &amp;allworkouts, std::vector&lt; Exercise &gt; &amp;allexercises, std::vector&lt; Training &gt; &amp;trainings, const Sortcon sc=Sortcon::ALPHA):&#160;functions.cpp']]]
+];

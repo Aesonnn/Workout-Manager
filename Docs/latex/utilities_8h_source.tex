@@ -1,0 +1,174 @@
+\doxysection{utilities.\+h}
+\hypertarget{utilities_8h_source}{}\label{utilities_8h_source}\mbox{\hyperlink{utilities_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UTILITIES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UTILITIES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cctype>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}fort.hpp"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a6e5affbf5c08fef0e28c094856f94627}{EASY}},}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83ac87f3be66ffc3c0d4249f1c2cc5f3cce}{MEDIUM}},}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a7c144eae2e08db14c82e376603cc01f4}{HARD}},}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83a696b031073e74bf2cb98e5ef201d4aa3}{UNKNOWN}}}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}}\ \{\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a002101f8725e5c78d9f30d87f3fa4c87}{ALPHA}},}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103ab718adec73e04ce3ec720dd11a06a308}{ID}},}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103aa2e1ec2dd3d8195d238c5494f0ac5578}{DIFF}},}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103aaee8071d1b09ae34698172cf44aaadfc}{DURAT}},}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a70920dc57a700735662d48026ff7a88a}{CALOR}},}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a633a6c7a6b9958f8174250094daf1e6a}{DATE}}}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ std::string\ \mbox{\hyperlink{utilities_8h_a5cd819ba5e86136b08b895f8162cf058}{color\_outpt}}(\textcolor{keyword}{const}\ std::string\&\&\ s);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00074\ std::istream\&\ \mbox{\hyperlink{utilities_8h_a252f064ff3de336f2ee510f9a2b4b7c1}{operator>>}}(std::istream\&\ is,\ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}\&\ c);}
+\DoxyCodeLine{00081\ std::ostream\&\ \mbox{\hyperlink{utilities_8h_ad83695815577790ebe692e3d87247bb0}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{utilities_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}\&\ c);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utilities_8h_a026f70ec3902443d3799cf1b2384dd63}{getstringYesNo}}(\textcolor{keywordtype}{bool}\&\ input,\ std::string\ s);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ L>}
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{utilities_8h_a07d11a656de49114733692d3e4aff062}{getID}}(\textcolor{keyword}{const}\ std::vector<L>\&\ objects,\ \textcolor{keyword}{const}\ std::string\ \&\&s)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ int32\_t\ input\ =\ 0;}
+\DoxyCodeLine{00113\ \ \ \ \ std::cout\ <<\ s;}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ std::string\ inpstream;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ std::getline(std::cin,\ inpstream);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ std::stringstream\ ss(inpstream);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inpstream\ ==\ \textcolor{stringliteral}{"{}q"{}}\ ||\ inpstream\ ==\ \textcolor{stringliteral}{"{}Q"{}})\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ >>\ input;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss.fail()\ ||\ !ss.eof()\ ||\ input\ <=\ 0\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ input\ >\ std::numeric\_limits<int32\_t>::max())\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\mbox{\hyperlink{utilities_8h_a5cd819ba5e86136b08b895f8162cf058}{color\_outpt}}(\textcolor{stringliteral}{"{}Invalid\ input."{}}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Please\ enter\ a\ non\ -\/\ negative\ integer\ value\ not\ greater\ "{}}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}than\ 2,147,483,647\(\backslash\)n"{}}));}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ id\_exists\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ c\ :\ objects)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c.id\ ==\ input)\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ id\_exists\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ input;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (id\_exists)\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\mbox{\hyperlink{utilities_8h_a5cd819ba5e86136b08b895f8162cf058}{color\_outpt}}(\textcolor{stringliteral}{"{}This\ id\ does\ not\ "{}}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}exist,\ please\ enter\ another\ one\ or\ type\ [q]\ to\ exit.\(\backslash\)n"{}}));}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::invalid\_argument\&\ e)}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//std::cin.ignore(std::numeric\_limits<std::streamsize>::max(),\ '\(\backslash\)n');}}
+\DoxyCodeLine{00156\ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00174\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utilities_8h_ae321c09d6954d7a989978802233529ca}{getInput}}(T\&\ input,\ \textcolor{keyword}{const}\ std::string\&\&\ s\ =\ \textcolor{stringliteral}{"{}Enter\ an\ integer\ value:\ "{}})\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same<T,\ std::string>::value)\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ std::cout\ <<\ s;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ getline(std::cin,\ input);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (input.size()\ >\ 35)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{utilities_8h_a5cd819ba5e86136b08b895f8162cf058}{color\_outpt}}(\textcolor{stringliteral}{"{}Please\ enter\ a\ more\ concise\ name\ "{}}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}(not\ more\ than\ 35\ symbols,\ including\ spaces)\(\backslash\)n"{}});}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ osstr\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\&\ c\ :\ input)\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::isspace(c))\ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ osstr\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!osstr)\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ n\ =\ input.length();}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ space\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ j\ =\ 0;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (j\ <\ n\ \&\&\ (input[j]\ ==\ \textcolor{charliteral}{'\ '}\ ||\ input[j]\ ==\ \textcolor{charliteral}{'\(\backslash\)t'}))\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ upt\ =\ j;}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ i\ =\ j;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (input[i]\ ==\ \textcolor{charliteral}{'\ '}\ ||\ input[i]\ ==\ \textcolor{charliteral}{'\(\backslash\)t'})\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!space)\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ input[j++]\ =\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ space\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ input[j++]\ =\ input[i];}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ space\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (j\ >\ 0\ \&\&\ (input[j\ -\/\ 1]\ ==\ \textcolor{charliteral}{'\ '}\ ||\ input[j\ -\/\ 1]\ ==\ \textcolor{charliteral}{'\(\backslash\)t'}))\ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ j-\/-\/;}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ input.resize(j);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ input.erase(0,\ upt);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ std::cout\ <<\ s;}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ impstream;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(std::cin,\ impstream);}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(impstream);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ >>\ input;}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss.fail()\ ||\ !ss.eof()\ ||\ input\ <=\ 0\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ input\ >\ std::numeric\_limits<T>::max())\ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\mbox{\hyperlink{utilities_8h_a5cd819ba5e86136b08b895f8162cf058}{color\_outpt}}(\textcolor{stringliteral}{"{}Invalid\ input.\ "{}}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Please\ enter\ a\ non-\/negative\ integer\ value\ not\ greater"{}}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ than\ "{}}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(std::numeric\_limits<T>::max())\ +\ \textcolor{stringliteral}{"{}.\(\backslash\)n"{}}));}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::invalid\_argument\&\ e)\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what();}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !UTILITIES\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,93 @@
+\doxysection{user.\+cpp File Reference}
+\hypertarget{user_8cpp}{}\label{user_8cpp}\index{user.cpp@{user.cpp}}
+{\ttfamily \#include \"{}user.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{user_8cpp_a3ab30d2cf16e9dc54c37186f990749bb}{get\+Username}} (std\+::string \&uname, std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&registered\+Users)
+\begin{DoxyCompactList}\small\item\em Get the Username from user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user_8cpp_a2527d551bd07a531023949d28a090aa9}{get\+Password}} (std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Get the password from user input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_8cpp_a0d49d7f57df4b82f92d702276a0591b1}{register\+New\+User}} (std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&registered\+Users)
+\begin{DoxyCompactList}\small\item\em Register new \doxylink{class_user}{User}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_8cpp_a6ef3bdcf26a0dd59cc4d9b02560fa62a}{login}} (const std\+::string \&username, const std\+::string \&password, std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&registered\+Users)
+\begin{DoxyCompactList}\small\item\em Login to the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{user_8cpp_a2527d551bd07a531023949d28a090aa9}\label{user_8cpp_a2527d551bd07a531023949d28a090aa9} 
+\index{user.cpp@{user.cpp}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!user.cpp@{user.cpp}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily void get\+Password (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Get the password from user input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uname} & The string to get input to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{user_8cpp_a3ab30d2cf16e9dc54c37186f990749bb}\label{user_8cpp_a3ab30d2cf16e9dc54c37186f990749bb} 
+\index{user.cpp@{user.cpp}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!user.cpp@{user.cpp}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily void get\+Username (\begin{DoxyParamCaption}\item[{std\+::string \&}]{uname,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&}]{registered\+Users }\end{DoxyParamCaption})}
+
+
+
+Get the Username from user input. 
+
+Checks if the username is one word and is not q or Q as these characters are reserved for exiting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uname} & The string to get input to \\
+\hline
+{\em registered\+Users} & Vector of all users \\
+\hline
+\end{DoxyParams}
+\Hypertarget{user_8cpp_a6ef3bdcf26a0dd59cc4d9b02560fa62a}\label{user_8cpp_a6ef3bdcf26a0dd59cc4d9b02560fa62a} 
+\index{user.cpp@{user.cpp}!login@{login}}
+\index{login@{login}!user.cpp@{user.cpp}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily int login (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&}]{registered\+Users }\end{DoxyParamCaption})}
+
+
+
+Login to the program. 
+
+Checks whether the user exists and their credentials are correct.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username \\
+\hline
+{\em password} & Password \\
+\hline
+{\em registered\+Users} & Vector of all users \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{user_8cpp_a0d49d7f57df4b82f92d702276a0591b1}\label{user_8cpp_a0d49d7f57df4b82f92d702276a0591b1} 
+\index{user.cpp@{user.cpp}!registerNewUser@{registerNewUser}}
+\index{registerNewUser@{registerNewUser}!user.cpp@{user.cpp}}
+\doxysubsubsection{\texorpdfstring{registerNewUser()}{registerNewUser()}}
+{\footnotesize\ttfamily int register\+New\+User (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&}]{registered\+Users }\end{DoxyParamCaption})}
+
+
+
+Register new \doxylink{class_user}{User}. 
+
+Creates a new user with data from user input and adds it to the vector of all users. 
+\begin{DoxyParams}{Parameters}
+{\em registered\+Users} & Vector of all users to add new user to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns the ID of the newly registered user 
+\end{DoxyReturn}

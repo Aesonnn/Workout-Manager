@@ -1,0 +1,106 @@
+\doxysection{functions.\+h}
+\hypertarget{functions_8h_source}{}\label{functions_8h_source}\mbox{\hyperlink{functions_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FUNCTIONS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FUNCTIONS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utilities_8h}{utilities.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{date_8h}{date.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{workout_8h}{workout.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{exercise_8h}{exercise.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utilities_8h}{utilities.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_training_8h}{Training.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{binaryrw_8h}{binaryrw.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_acbb7fddf762e06ead9e501d4bfe1cdea}{pmenuinput}}(\textcolor{keywordtype}{int}\ \&logsign);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ Adding\ objects}}
+\DoxyCodeLine{00025\ \textcolor{comment}{}}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a98ec9e3f4051bf3c7b0f215e6eafeb5f}{addworkouts}}(std::vector<Workout>\ \&allworkouts,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Exercise>\ \&allexercises,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings,\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_add759a5d186a2258e0bc5c9ee1bd8d01}{add\_exercises\_to\_w}}(std::vector<Exercise>\ \&allexercises,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Workout>\ \&allworkouts,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ Menus}}
+\DoxyCodeLine{00060\ \textcolor{comment}{}}
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a1e826d5b31a8a1c65865cd3f55e91d57}{removingmenu}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings,\ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}}\ \&sc,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<User>\ \&users,\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a96bc2fc9e5e173b1dc37f51307515b9d}{sortingmenu}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings,\ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}}\ \&sc);}
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_aa1abea600d7e84647e99ebb34a799764}{filteringmenu}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a9bc4e5a2c3e14da52f9b32eb145e45b2}{summarymenu}}(\textcolor{keyword}{const}\ std::vector<Workout>\ \&work,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a7a8d7746cecce9fed6e3d55f3b233425}{changingmenu}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ Filtering\ functons}}
+\DoxyCodeLine{00123\ \textcolor{comment}{}}
+\DoxyCodeLine{00131\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_acca513405a345d01644fa34d72c4f90c}{filtr\_compltd}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a51e282c643a61c1b6ce2de22fe3cbd10}{filtr\_wid}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a2fb1ba17c24bd916f0cdacd08e118df7}{filtr\_eid}}(std::vector<Exercise>\ \&exer);}
+\DoxyCodeLine{00155\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_ab21236fbaf6f2ea254696be7401774cc}{filtr\_wname}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00162\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_aa1664d43e830409e267621000f3b8fac}{filtr\_ename}}(\textcolor{keyword}{const}\ std::vector<Exercise>\ \&exer);}
+\DoxyCodeLine{00168\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a98c0e8a0faa545aa386af7240babfb83}{filtr\_ediff}}(\textcolor{keyword}{const}\ std::vector<Exercise>\ \&exer);}
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_aa8a8f32d05ad64c710b3fbe530558543}{filtr\_wreps}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a9fad5c3de4ca8ffa8dcddf36c0c2b9ef}{filtr\_wsets}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00196\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a98099e4d87909b3d7dac001b10eafab7}{filtr\_wexerc}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00205\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a3e4b2ec8ea6c1c4ab358543e521a6719}{filtr\_wsdate}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00209\ \textcolor{comment}{//\ Removing\ functons}}
+\DoxyCodeLine{00211\ \textcolor{comment}{}}
+\DoxyCodeLine{00220\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_ac6955bfb3258fc45f9d0dfcb2333bdec}{removeWorkout}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings,\ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}}\ \&sc);}
+\DoxyCodeLine{00229\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a8d0ce4acce7625e9befb3b2a55bd8d14}{removeExercise}}(std::vector<Exercise>\ \&vector,}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00240\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a9b71a9fef12ba6eb673bc3b453237e74}{removeExercisefromWorkout}}(std::vector<Workout>\ \&work,}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings,\ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}}\ \&sc);}
+\DoxyCodeLine{00250\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a984d02841fd3818b51ee3eb5fb02fa07}{removeWorkout\_fromdate}}(std::vector<Workout>\ \&work,}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00259\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a5d437c49d9b3bd30cc6e59bb9c1e93e3}{remove\_curruser}}(std::vector<User>\ \&users,\ \textcolor{keyword}{const}\ int32\_t\ \&us\_id);}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00262\ \textcolor{comment}{//\ Sorting\ functions}}
+\DoxyCodeLine{00264\ \textcolor{comment}{}}
+\DoxyCodeLine{00271\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a3d3b02c5d4ffe917f1e6eed54b833d77}{sort\_date}}(std::vector<Workout>\ \&work,\ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00278\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a822377cb7fffd62f142cb9c40206049d}{sort\_cal}}(std::vector<Workout>\ \&work,\ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00285\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a106d3b870267470b855360781b2cc9fe}{sort\_diff}}(std::vector<Workout>\ \&work,\ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00292\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a5714e433c95b86b01de772466486d027}{sort\_dur}}(std::vector<Workout>\ \&work,\ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00302\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_ad845bf884b3dca7d9b4e0c5bbdac9b79}{sort\_alpha}}(std::vector<Workout>\ \&work,\ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00309\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_aedba4a1429533150672c6fc521d35a86}{sort\_id}}(std::vector<Workout>\&\ work,\ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00312\ \textcolor{comment}{//\ Changing\ functions}}
+\DoxyCodeLine{00314\ \textcolor{comment}{}}
+\DoxyCodeLine{00322\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_aae28ebce4a7252a5791d7c5d1406189f}{changeObject}}(std::vector<Workout>\ \&work,\ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings);}
+\DoxyCodeLine{00329\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_aae28ebce4a7252a5791d7c5d1406189f}{changeObject}}(std::vector<Exercise>\ \&exer);}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00332\ \textcolor{comment}{//\ Printing}}
+\DoxyCodeLine{00334\ \textcolor{comment}{}}
+\DoxyCodeLine{00344\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a5f1a26094f0ef21c2d6e6907daceb2d2}{print\_filtr\_w}}(std::vector<Workout>\ \&work,}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Exercise>\ \&exer,}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&filtered\_trainings);}
+\DoxyCodeLine{00358\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a6f90d40c4ccf9296a939695dbd5a88a8}{printWorkouts}}(std::vector<Workout>\ \&allworkouts,}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Exercise>\ \&allexercises,}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Training>\ \&trainings,}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}}\ sc\ =\ \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a002101f8725e5c78d9f30d87f3fa4c87}{Sortcon::ALPHA}});}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00369\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a3160020dba9f7a0dc04fec2eef4cac20}{output\_byid}}(\textcolor{keyword}{const}\ int32\_t\ \&\textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::vector<Workout>\ \&cont);}
+\DoxyCodeLine{00376\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions_8h_a3160020dba9f7a0dc04fec2eef4cac20}{output\_byid}}(\textcolor{keyword}{const}\ int32\_t\ \&\textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::vector<Exercise>\ \&cont);}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !FUNCTIONS\_H}}
+
+\end{DoxyCode}

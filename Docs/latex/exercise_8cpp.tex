@@ -1,0 +1,73 @@
+\doxysection{exercise.\+cpp File Reference}
+\hypertarget{exercise_8cpp}{}\label{exercise_8cpp}\index{exercise.cpp@{exercise.cpp}}
+{\ttfamily \#include \"{}exercise.\+h\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \"{}fort.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}fort.\+c\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{exercise_8cpp_ab449884eb80c3b27da21a1e562a59a18}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{struct_exercise}{Exercise}} \&e)
+\begin{DoxyCompactList}\small\item\em Overloaded insertion operator to output \doxylink{struct_exercise}{Exercise} object. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{exercise_8cpp_af45042f52aefc8ff83b0ef99408b47b5}{operator$<$$<$}} (std\+::ostream \&os, const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exvec)
+\begin{DoxyCompactList}\small\item\em Overloaded insertion operator to output \doxylink{struct_exercise}{Exercise} vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{exercise_8cpp_a9c729f5a2e83cd2a382617dc4bd386f9}{getexercises}} (std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Create and get input for \doxylink{struct_exercise}{Exercise} objects from the user and push them into a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{exercise_8cpp_a9c729f5a2e83cd2a382617dc4bd386f9}\label{exercise_8cpp_a9c729f5a2e83cd2a382617dc4bd386f9} 
+\index{exercise.cpp@{exercise.cpp}!getexercises@{getexercises}}
+\index{getexercises@{getexercises}!exercise.cpp@{exercise.cpp}}
+\doxysubsubsection{\texorpdfstring{getexercises()}{getexercises()}}
+{\footnotesize\ttfamily void getexercises (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Create and get input for \doxylink{struct_exercise}{Exercise} objects from the user and push them into a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Reference to the vector where the \doxylink{struct_exercise}{Exercise} objects will be stored. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{exercise_8cpp_ab449884eb80c3b27da21a1e562a59a18}\label{exercise_8cpp_ab449884eb80c3b27da21a1e562a59a18} 
+\index{exercise.cpp@{exercise.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!exercise.cpp@{exercise.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{struct_exercise}{Exercise}} \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Overloaded insertion operator to output \doxylink{struct_exercise}{Exercise} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to write the \doxylink{struct_exercise}{Exercise} object to. \\
+\hline
+{\em e} & The \doxylink{struct_exercise}{Exercise} object to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream after writing the \doxylink{struct_exercise}{Exercise} object. 
+\end{DoxyReturn}
+\Hypertarget{exercise_8cpp_af45042f52aefc8ff83b0ef99408b47b5}\label{exercise_8cpp_af45042f52aefc8ff83b0ef99408b47b5} 
+\index{exercise.cpp@{exercise.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!exercise.cpp@{exercise.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exvec }\end{DoxyParamCaption})}
+
+
+
+Overloaded insertion operator to output \doxylink{struct_exercise}{Exercise} vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to write the \doxylink{struct_exercise}{Exercise} vector to. \\
+\hline
+{\em exvec} & The \doxylink{struct_exercise}{Exercise} vector to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream after writing the \doxylink{struct_exercise}{Exercise} vector. 
+\end{DoxyReturn}

@@ -1,0 +1,752 @@
+\doxysection{functions.\+cpp File Reference}
+\hypertarget{functions_8cpp}{}\label{functions_8cpp}\index{functions.cpp@{functions.cpp}}
+{\ttfamily \#include \"{}functions.\+h\"{}}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{functions_8cpp_a98ec9e3f4051bf3c7b0f215e6eafeb5f}{addworkouts}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&allworkouts, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&allexercises, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings, int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Add workouts data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_add759a5d186a2258e0bc5c9ee1bd8d01}{add\+\_\+exercises\+\_\+to\+\_\+w}} (std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&allexercises, const std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&allworkouts, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Add exercises to workouts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_acbb7fddf762e06ead9e501d4bfe1cdea}{pmenuinput}} (int \&logsign)
+\begin{DoxyCompactList}\small\item\em Output starting menu and take the user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a1e826d5b31a8a1c65865cd3f55e91d57}{removingmenu}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings, \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \&sc, std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&users, int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Outputs removing menu with its functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a96bc2fc9e5e173b1dc37f51307515b9d}{sortingmenu}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings, \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \&sc)
+\begin{DoxyCompactList}\small\item\em Outputs Sorting menu with its functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_aa1abea600d7e84647e99ebb34a799764}{filteringmenu}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs filtering menu with its functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a9bc4e5a2c3e14da52f9b32eb145e45b2}{summarymenu}} (const std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, const std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs summary menu with its functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a7a8d7746cecce9fed6e3d55f3b233425}{changingmenu}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs changing menu with its functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_ac6955bfb3258fc45f9d0dfcb2333bdec}{remove\+Workout}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings, \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \&sc)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts and lets user remove them by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a8d0ce4acce7625e9befb3b2a55bd8d14}{remove\+Exercise}} (std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&vector, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs exercises and lets user remove them by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a9b71a9fef12ba6eb673bc3b453237e74}{remove\+Exercisefrom\+Workout}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings, \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \&sc)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts and lets user remove exercises from them by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a984d02841fd3818b51ee3eb5fb02fa07}{remove\+Workout\+\_\+fromdate}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts and lets user remove Workouts before certain date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a5d437c49d9b3bd30cc6e59bb9c1e93e3}{remove\+\_\+curruser}} (std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&users, const int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Lets the user delete their account. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a3d3b02c5d4ffe917f1e6eed54b833d77}{sort\+\_\+date}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Sorts workouts by date (Newest first). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a822377cb7fffd62f142cb9c40206049d}{sort\+\_\+cal}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Sorts workouts by calories burnt (Greater first). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a106d3b870267470b855360781b2cc9fe}{sort\+\_\+diff}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Sorts workouts by difficulty (Harder first). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a5714e433c95b86b01de772466486d027}{sort\+\_\+dur}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Sorts workouts by duration (Longer first). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_ad845bf884b3dca7d9b4e0c5bbdac9b79}{sort\+\_\+alpha}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Sorts workouts by name alphabetically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_aedba4a1429533150672c6fc521d35a86}{sort\+\_\+id}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Sorts workouts by ID (lesser first). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_acca513405a345d01644fa34d72c4f90c}{filtr\+\_\+compltd}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs completed/not-\/completed workouts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a51e282c643a61c1b6ce2de22fe3cbd10}{filtr\+\_\+wid}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs \doxylink{struct_workout}{Workout} by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a2fb1ba17c24bd916f0cdacd08e118df7}{filtr\+\_\+eid}} (std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer)
+\begin{DoxyCompactList}\small\item\em Outputs \doxylink{struct_exercise}{Exercise} by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_ab21236fbaf6f2ea254696be7401774cc}{filtr\+\_\+wname}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_aa1664d43e830409e267621000f3b8fac}{filtr\+\_\+ename}} (const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer)
+\begin{DoxyCompactList}\small\item\em Outputs Exercises by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a98c0e8a0faa545aa386af7240babfb83}{filtr\+\_\+ediff}} (const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer)
+\begin{DoxyCompactList}\small\item\em Outputs Exercises by difficulty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_aa8a8f32d05ad64c710b3fbe530558543}{filtr\+\_\+wreps}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts if they haveexercises with more than N number of reps. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a9fad5c3de4ca8ffa8dcddf36c0c2b9ef}{filtr\+\_\+wsets}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts if they haveexercises with more than N number of sets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a98099e4d87909b3d7dac001b10eafab7}{filtr\+\_\+wexerc}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts if they have hard/medium/easy Exercises. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a3e4b2ec8ea6c1c4ab358543e521a6719}{filtr\+\_\+wsdate}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts if they have been completed after the certain date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_aae28ebce4a7252a5791d7c5d1406189f}{change\+Object}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings)
+\begin{DoxyCompactList}\small\item\em Outputs Workouts and lets user change data about the \doxylink{struct_workout}{Workout}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a12255a61ec7f24bbc5dbe3d4cda47357}{change\+Object}} (std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer)
+\begin{DoxyCompactList}\small\item\em Outputs Exercises and lets user change data about the \doxylink{struct_exercise}{Exercise}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a5f1a26094f0ef21c2d6e6907daceb2d2}{print\+\_\+filtr\+\_\+w}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&exer, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&filtered\+\_\+trainings)
+\begin{DoxyCompactList}\small\item\em Print out Workouts after filtering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_ac954cfc0cba8102e82dfa1f767529d3b}{print\+Workouts}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&allworkouts, std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&allexercises, std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&trainings, const \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} sc)
+\begin{DoxyCompactList}\small\item\em Print out Workouts with its exercises according to sorting condition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a3160020dba9f7a0dc04fec2eef4cac20}{output\+\_\+byid}} (const int32\+\_\+t \&id, const std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&cont)
+\begin{DoxyCompactList}\small\item\em Output \doxylink{struct_workout}{Workout} by its ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8cpp_a3e068050f0e7c649de9e670a46fae7b2}{output\+\_\+byid}} (const int32\+\_\+t \&id, const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&cont)
+\begin{DoxyCompactList}\small\item\em Output \doxylink{struct_exercise}{Exercise} by its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{functions_8cpp_add759a5d186a2258e0bc5c9ee1bd8d01}\label{functions_8cpp_add759a5d186a2258e0bc5c9ee1bd8d01} 
+\index{functions.cpp@{functions.cpp}!add\_exercises\_to\_w@{add\_exercises\_to\_w}}
+\index{add\_exercises\_to\_w@{add\_exercises\_to\_w}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_exercises\_to\_w()}{add\_exercises\_to\_w()}}
+{\footnotesize\ttfamily void add\+\_\+exercises\+\_\+to\+\_\+w (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{allexercises,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{allworkouts,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Add exercises to workouts. 
+
+This is how exercises are added to workouts. The user can choose from all exercises or create new ones right away. 
+\begin{DoxyParams}{Parameters}
+{\em allexercises} & Vector of all Exercises \\
+\hline
+{\em allworkouts} & Vector of all Workouts \\
+\hline
+{\em trainings} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & gets thrown and caught if the user input is not correct \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{functions_8cpp_a98ec9e3f4051bf3c7b0f215e6eafeb5f}\label{functions_8cpp_a98ec9e3f4051bf3c7b0f215e6eafeb5f} 
+\index{functions.cpp@{functions.cpp}!addworkouts@{addworkouts}}
+\index{addworkouts@{addworkouts}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{addworkouts()}{addworkouts()}}
+{\footnotesize\ttfamily void addworkouts (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{allworkouts,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{allexercises,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Add workouts data. 
+
+Allows user to choose whether to add completely new workout or duplicate existing one with all its propeties and exercises. 
+\begin{DoxyParams}{Parameters}
+{\em allworkouts} & Vector of workouts to add objects to \\
+\hline
+{\em allexercises} & Vector of exercises \\
+\hline
+{\em trainings} & Vector of trainings \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & gets thrown and caught if the user input is not correct \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+void \doxylink{workout_8cpp_a4a3e8cf7e60984a2228183ee45d81ba6}{get\+Workouts(std\+::vector$<$\+Workout$>$\& work, int32\+\_\+t\& us\+\_\+id)}; 
+\end{DoxySeeAlso}
+\Hypertarget{functions_8cpp_a12255a61ec7f24bbc5dbe3d4cda47357}\label{functions_8cpp_a12255a61ec7f24bbc5dbe3d4cda47357} 
+\index{functions.cpp@{functions.cpp}!changeObject@{changeObject}}
+\index{changeObject@{changeObject}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{changeObject()}{changeObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void change\+Object (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer }\end{DoxyParamCaption})}
+
+
+
+Outputs Exercises and lets user change data about the \doxylink{struct_exercise}{Exercise}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exer} & Vector of Exercises \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_aae28ebce4a7252a5791d7c5d1406189f}\label{functions_8cpp_aae28ebce4a7252a5791d7c5d1406189f} 
+\index{functions.cpp@{functions.cpp}!changeObject@{changeObject}}
+\index{changeObject@{changeObject}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{changeObject()}{changeObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void change\+Object (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts and lets user change data about the \doxylink{struct_workout}{Workout}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a7a8d7746cecce9fed6e3d55f3b233425}\label{functions_8cpp_a7a8d7746cecce9fed6e3d55f3b233425} 
+\index{functions.cpp@{functions.cpp}!changingmenu@{changingmenu}}
+\index{changingmenu@{changingmenu}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{changingmenu()}{changingmenu()}}
+{\footnotesize\ttfamily void changingmenu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs changing menu with its functionality. 
+
+Allows the user to change Workouts/\+Exercises data. 
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_aa1abea600d7e84647e99ebb34a799764}\label{functions_8cpp_aa1abea600d7e84647e99ebb34a799764} 
+\index{functions.cpp@{functions.cpp}!filteringmenu@{filteringmenu}}
+\index{filteringmenu@{filteringmenu}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filteringmenu()}{filteringmenu()}}
+{\footnotesize\ttfamily void filteringmenu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs filtering menu with its functionality. 
+
+Allows the user to filter Workouts/\+Exercises. 
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_acca513405a345d01644fa34d72c4f90c}\label{functions_8cpp_acca513405a345d01644fa34d72c4f90c} 
+\index{functions.cpp@{functions.cpp}!filtr\_compltd@{filtr\_compltd}}
+\index{filtr\_compltd@{filtr\_compltd}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_compltd()}{filtr\_compltd()}}
+{\footnotesize\ttfamily void filtr\+\_\+compltd (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs completed/not-\/completed workouts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a98c0e8a0faa545aa386af7240babfb83}\label{functions_8cpp_a98c0e8a0faa545aa386af7240babfb83} 
+\index{functions.cpp@{functions.cpp}!filtr\_ediff@{filtr\_ediff}}
+\index{filtr\_ediff@{filtr\_ediff}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_ediff()}{filtr\_ediff()}}
+{\footnotesize\ttfamily void filtr\+\_\+ediff (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer }\end{DoxyParamCaption})}
+
+
+
+Outputs Exercises by difficulty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exer} & Vector of Exercises \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a2fb1ba17c24bd916f0cdacd08e118df7}\label{functions_8cpp_a2fb1ba17c24bd916f0cdacd08e118df7} 
+\index{functions.cpp@{functions.cpp}!filtr\_eid@{filtr\_eid}}
+\index{filtr\_eid@{filtr\_eid}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_eid()}{filtr\_eid()}}
+{\footnotesize\ttfamily void filtr\+\_\+eid (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer }\end{DoxyParamCaption})}
+
+
+
+Outputs \doxylink{struct_exercise}{Exercise} by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exer} & Vector of Exercises \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_aa1664d43e830409e267621000f3b8fac}\label{functions_8cpp_aa1664d43e830409e267621000f3b8fac} 
+\index{functions.cpp@{functions.cpp}!filtr\_ename@{filtr\_ename}}
+\index{filtr\_ename@{filtr\_ename}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_ename()}{filtr\_ename()}}
+{\footnotesize\ttfamily void filtr\+\_\+ename (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer }\end{DoxyParamCaption})}
+
+
+
+Outputs Exercises by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exer} & Vector of Exercises \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a98099e4d87909b3d7dac001b10eafab7}\label{functions_8cpp_a98099e4d87909b3d7dac001b10eafab7} 
+\index{functions.cpp@{functions.cpp}!filtr\_wexerc@{filtr\_wexerc}}
+\index{filtr\_wexerc@{filtr\_wexerc}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_wexerc()}{filtr\_wexerc()}}
+{\footnotesize\ttfamily void filtr\+\_\+wexerc (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts if they have hard/medium/easy Exercises. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a51e282c643a61c1b6ce2de22fe3cbd10}\label{functions_8cpp_a51e282c643a61c1b6ce2de22fe3cbd10} 
+\index{functions.cpp@{functions.cpp}!filtr\_wid@{filtr\_wid}}
+\index{filtr\_wid@{filtr\_wid}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_wid()}{filtr\_wid()}}
+{\footnotesize\ttfamily void filtr\+\_\+wid (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs \doxylink{struct_workout}{Workout} by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_ab21236fbaf6f2ea254696be7401774cc}\label{functions_8cpp_ab21236fbaf6f2ea254696be7401774cc} 
+\index{functions.cpp@{functions.cpp}!filtr\_wname@{filtr\_wname}}
+\index{filtr\_wname@{filtr\_wname}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_wname()}{filtr\_wname()}}
+{\footnotesize\ttfamily void filtr\+\_\+wname (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_aa8a8f32d05ad64c710b3fbe530558543}\label{functions_8cpp_aa8a8f32d05ad64c710b3fbe530558543} 
+\index{functions.cpp@{functions.cpp}!filtr\_wreps@{filtr\_wreps}}
+\index{filtr\_wreps@{filtr\_wreps}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_wreps()}{filtr\_wreps()}}
+{\footnotesize\ttfamily void filtr\+\_\+wreps (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts if they haveexercises with more than N number of reps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a3e4b2ec8ea6c1c4ab358543e521a6719}\label{functions_8cpp_a3e4b2ec8ea6c1c4ab358543e521a6719} 
+\index{functions.cpp@{functions.cpp}!filtr\_wsdate@{filtr\_wsdate}}
+\index{filtr\_wsdate@{filtr\_wsdate}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_wsdate()}{filtr\_wsdate()}}
+{\footnotesize\ttfamily void filtr\+\_\+wsdate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts if they have been completed after the certain date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a9fad5c3de4ca8ffa8dcddf36c0c2b9ef}\label{functions_8cpp_a9fad5c3de4ca8ffa8dcddf36c0c2b9ef} 
+\index{functions.cpp@{functions.cpp}!filtr\_wsets@{filtr\_wsets}}
+\index{filtr\_wsets@{filtr\_wsets}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{filtr\_wsets()}{filtr\_wsets()}}
+{\footnotesize\ttfamily void filtr\+\_\+wsets (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts if they haveexercises with more than N number of sets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a3e068050f0e7c649de9e670a46fae7b2}\label{functions_8cpp_a3e068050f0e7c649de9e670a46fae7b2} 
+\index{functions.cpp@{functions.cpp}!output\_byid@{output\_byid}}
+\index{output\_byid@{output\_byid}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{output\_byid()}{output\_byid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void output\+\_\+byid (\begin{DoxyParamCaption}\item[{const int32\+\_\+t \&}]{id,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{cont }\end{DoxyParamCaption})}
+
+
+
+Output \doxylink{struct_exercise}{Exercise} by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{struct_exercise}{Exercise} ID \\
+\hline
+{\em cont} & Vector of Exercises \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a3160020dba9f7a0dc04fec2eef4cac20}\label{functions_8cpp_a3160020dba9f7a0dc04fec2eef4cac20} 
+\index{functions.cpp@{functions.cpp}!output\_byid@{output\_byid}}
+\index{output\_byid@{output\_byid}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{output\_byid()}{output\_byid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void output\+\_\+byid (\begin{DoxyParamCaption}\item[{const int32\+\_\+t \&}]{id,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{cont }\end{DoxyParamCaption})}
+
+
+
+Output \doxylink{struct_workout}{Workout} by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{struct_workout}{Workout} ID \\
+\hline
+{\em cont} & Vector of Workouts \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_acbb7fddf762e06ead9e501d4bfe1cdea}\label{functions_8cpp_acbb7fddf762e06ead9e501d4bfe1cdea} 
+\index{functions.cpp@{functions.cpp}!pmenuinput@{pmenuinput}}
+\index{pmenuinput@{pmenuinput}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{pmenuinput()}{pmenuinput()}}
+{\footnotesize\ttfamily void pmenuinput (\begin{DoxyParamCaption}\item[{int \&}]{logsign }\end{DoxyParamCaption})}
+
+
+
+Output starting menu and take the user input. 
+
+Input is validated. 
+\begin{DoxyParams}{Parameters}
+{\em logsign} & Record the option user chooses \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & gets thrown and caught if the user input is not correct \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{functions_8cpp_a5f1a26094f0ef21c2d6e6907daceb2d2}\label{functions_8cpp_a5f1a26094f0ef21c2d6e6907daceb2d2} 
+\index{functions.cpp@{functions.cpp}!print\_filtr\_w@{print\_filtr\_w}}
+\index{print\_filtr\_w@{print\_filtr\_w}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_filtr\_w()}{print\_filtr\_w()}}
+{\footnotesize\ttfamily void print\+\_\+filtr\+\_\+w (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{filtered\+\_\+trainings }\end{DoxyParamCaption})}
+
+
+
+Print out Workouts after filtering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of all workouts \\
+\hline
+{\em exer} & Vector of all exercises \\
+\hline
+{\em filtered\+\_\+trainings} & Vector of filtered trainings \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+void output\+\_\+byid(int32\+\_\+t id, std\+::vector$<$\+Workout$>$ \&cont); 
+
+output\+\_\+byid(int32\+\_\+t id, std\+::vector$<$\+Exercise$>$ \&cont); 
+\end{DoxySeeAlso}
+\Hypertarget{functions_8cpp_ac954cfc0cba8102e82dfa1f767529d3b}\label{functions_8cpp_ac954cfc0cba8102e82dfa1f767529d3b} 
+\index{functions.cpp@{functions.cpp}!printWorkouts@{printWorkouts}}
+\index{printWorkouts@{printWorkouts}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{printWorkouts()}{printWorkouts()}}
+{\footnotesize\ttfamily void print\+Workouts (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{allworkouts,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{allexercises,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings,  }\item[{const \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}}}]{sc = {\ttfamily \mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103a002101f8725e5c78d9f30d87f3fa4c87}{Sortcon\+::\+ALPHA}}} }\end{DoxyParamCaption})}
+
+
+
+Print out Workouts with its exercises according to sorting condition. 
+
+Sorts workouts alphabetically, if no sorting condition is provided. 
+\begin{DoxyParams}{Parameters}
+{\em allworkouts} & Vector of all workouts \\
+\hline
+{\em allexercises} & Vector of all exercises \\
+\hline
+{\em trainings} & Vector of trainings \\
+\hline
+{\em sc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+void output\+\_\+byid(int32\+\_\+t id, std\+::vector$<$\+Workout$>$ \&cont); 
+
+output\+\_\+byid(int32\+\_\+t id, std\+::vector$<$\+Exercise$>$ \&cont); 
+\end{DoxySeeAlso}
+\Hypertarget{functions_8cpp_a5d437c49d9b3bd30cc6e59bb9c1e93e3}\label{functions_8cpp_a5d437c49d9b3bd30cc6e59bb9c1e93e3} 
+\index{functions.cpp@{functions.cpp}!remove\_curruser@{remove\_curruser}}
+\index{remove\_curruser@{remove\_curruser}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{remove\_curruser()}{remove\_curruser()}}
+{\footnotesize\ttfamily void remove\+\_\+curruser (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&}]{users,  }\item[{const int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Lets the user delete their account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em users} & Vector of all Users \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User}\textquotesingle{}s ID \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a8d0ce4acce7625e9befb3b2a55bd8d14}\label{functions_8cpp_a8d0ce4acce7625e9befb3b2a55bd8d14} 
+\index{functions.cpp@{functions.cpp}!removeExercise@{removeExercise}}
+\index{removeExercise@{removeExercise}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{removeExercise()}{removeExercise()}}
+{\footnotesize\ttfamily void remove\+Exercise (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{vector,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs exercises and lets user remove them by ID. 
+
+Exercises are also removed from all workouts that have them. 
+\begin{DoxyParams}{Parameters}
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a9b71a9fef12ba6eb673bc3b453237e74}\label{functions_8cpp_a9b71a9fef12ba6eb673bc3b453237e74} 
+\index{functions.cpp@{functions.cpp}!removeExercisefromWorkout@{removeExercisefromWorkout}}
+\index{removeExercisefromWorkout@{removeExercisefromWorkout}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{removeExercisefromWorkout()}{removeExercisefromWorkout()}}
+{\footnotesize\ttfamily void remove\+Exercisefrom\+Workout (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings,  }\item[{\mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \&}]{sc }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts and lets user remove exercises from them by ID. 
+
+Exercises are removed only form chosen workout. 
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+{\em sc} & Sorting condition \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_ac6955bfb3258fc45f9d0dfcb2333bdec}\label{functions_8cpp_ac6955bfb3258fc45f9d0dfcb2333bdec} 
+\index{functions.cpp@{functions.cpp}!removeWorkout@{removeWorkout}}
+\index{removeWorkout@{removeWorkout}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{removeWorkout()}{removeWorkout()}}
+{\footnotesize\ttfamily void remove\+Workout (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings,  }\item[{\mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \&}]{sc }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts and lets user remove them by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+{\em sc} & Sorting condition \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a984d02841fd3818b51ee3eb5fb02fa07}\label{functions_8cpp_a984d02841fd3818b51ee3eb5fb02fa07} 
+\index{functions.cpp@{functions.cpp}!removeWorkout\_fromdate@{removeWorkout\_fromdate}}
+\index{removeWorkout\_fromdate@{removeWorkout\_fromdate}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{removeWorkout\_fromdate()}{removeWorkout\_fromdate()}}
+{\footnotesize\ttfamily void remove\+Workout\+\_\+fromdate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs Workouts and lets user remove Workouts before certain date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a1e826d5b31a8a1c65865cd3f55e91d57}\label{functions_8cpp_a1e826d5b31a8a1c65865cd3f55e91d57} 
+\index{functions.cpp@{functions.cpp}!removingmenu@{removingmenu}}
+\index{removingmenu@{removingmenu}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{removingmenu()}{removingmenu()}}
+{\footnotesize\ttfamily void removingmenu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings,  }\item[{\mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \&}]{sc,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \&}]{users,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Outputs removing menu with its functionality. 
+
+Allows the user to delete Workouts/\+Exercises data or the account. 
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+{\em sc} & Sorting condition \\
+\hline
+{\em users} & Vector of Users \\
+\hline
+{\em us\+\_\+id} & \doxylink{class_user}{User} ID \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_ad845bf884b3dca7d9b4e0c5bbdac9b79}\label{functions_8cpp_ad845bf884b3dca7d9b4e0c5bbdac9b79} 
+\index{functions.cpp@{functions.cpp}!sort\_alpha@{sort\_alpha}}
+\index{sort\_alpha@{sort\_alpha}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{sort\_alpha()}{sort\_alpha()}}
+{\footnotesize\ttfamily void sort\+\_\+alpha (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Sorts workouts by name alphabetically. 
+
+Sorts by ID first to avoid problems with workouts that have same names 
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+void \doxylink{functions_8h_aedba4a1429533150672c6fc521d35a86}{sort\+\_\+id(std\+::vector$<$\+Workout$>$\& work,  std\+::vector$<$\+Training$>$ \&trainings)}; 
+\end{DoxySeeAlso}
+\Hypertarget{functions_8cpp_a822377cb7fffd62f142cb9c40206049d}\label{functions_8cpp_a822377cb7fffd62f142cb9c40206049d} 
+\index{functions.cpp@{functions.cpp}!sort\_cal@{sort\_cal}}
+\index{sort\_cal@{sort\_cal}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{sort\_cal()}{sort\_cal()}}
+{\footnotesize\ttfamily void sort\+\_\+cal (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Sorts workouts by calories burnt (Greater first). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a3d3b02c5d4ffe917f1e6eed54b833d77}\label{functions_8cpp_a3d3b02c5d4ffe917f1e6eed54b833d77} 
+\index{functions.cpp@{functions.cpp}!sort\_date@{sort\_date}}
+\index{sort\_date@{sort\_date}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{sort\_date()}{sort\_date()}}
+{\footnotesize\ttfamily void sort\+\_\+date (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Sorts workouts by date (Newest first). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a106d3b870267470b855360781b2cc9fe}\label{functions_8cpp_a106d3b870267470b855360781b2cc9fe} 
+\index{functions.cpp@{functions.cpp}!sort\_diff@{sort\_diff}}
+\index{sort\_diff@{sort\_diff}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{sort\_diff()}{sort\_diff()}}
+{\footnotesize\ttfamily void sort\+\_\+diff (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Sorts workouts by difficulty (Harder first). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a5714e433c95b86b01de772466486d027}\label{functions_8cpp_a5714e433c95b86b01de772466486d027} 
+\index{functions.cpp@{functions.cpp}!sort\_dur@{sort\_dur}}
+\index{sort\_dur@{sort\_dur}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{sort\_dur()}{sort\_dur()}}
+{\footnotesize\ttfamily void sort\+\_\+dur (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Sorts workouts by duration (Longer first). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_aedba4a1429533150672c6fc521d35a86}\label{functions_8cpp_aedba4a1429533150672c6fc521d35a86} 
+\index{functions.cpp@{functions.cpp}!sort\_id@{sort\_id}}
+\index{sort\_id@{sort\_id}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{sort\_id()}{sort\_id()}}
+{\footnotesize\ttfamily void sort\+\_\+id (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Sorts workouts by ID (lesser first). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a96bc2fc9e5e173b1dc37f51307515b9d}\label{functions_8cpp_a96bc2fc9e5e173b1dc37f51307515b9d} 
+\index{functions.cpp@{functions.cpp}!sortingmenu@{sortingmenu}}
+\index{sortingmenu@{sortingmenu}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{sortingmenu()}{sortingmenu()}}
+{\footnotesize\ttfamily void sortingmenu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings,  }\item[{\mbox{\hyperlink{utilities_8h_ae208c05fa4c903e6c4b2cbf28f805103}{Sortcon}} \&}]{sc }\end{DoxyParamCaption})}
+
+
+
+Outputs Sorting menu with its functionality. 
+
+Allows the user to sort Workouts/\+Exercises. 
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+{\em sc} & Sorting condition \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions_8cpp_a9bc4e5a2c3e14da52f9b32eb145e45b2}\label{functions_8cpp_a9bc4e5a2c3e14da52f9b32eb145e45b2} 
+\index{functions.cpp@{functions.cpp}!summarymenu@{summarymenu}}
+\index{summarymenu@{summarymenu}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{summarymenu()}{summarymenu()}}
+{\footnotesize\ttfamily void summarymenu (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_exercise}{Exercise}} $>$ \&}]{exer,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_training}{Training}} $>$ \&}]{trainings }\end{DoxyParamCaption})}
+
+
+
+Outputs summary menu with its functionality. 
+
+Allows the user to sum Workouts/\+Exercises according to different parameters. 
+\begin{DoxyParams}{Parameters}
+{\em work} & Vector of Workouts \\
+\hline
+{\em exer} & Vector of Exercises \\
+\hline
+{\em trainings} & Vector of Trainings \\
+\hline
+\end{DoxyParams}

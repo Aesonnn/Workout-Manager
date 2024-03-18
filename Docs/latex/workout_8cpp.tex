@@ -1,0 +1,73 @@
+\doxysection{workout.\+cpp File Reference}
+\hypertarget{workout_8cpp}{}\label{workout_8cpp}\index{workout.cpp@{workout.cpp}}
+{\ttfamily \#include \"{}workout.\+h\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{workout_8cpp_a96982777031f8050901e2c34a954c277}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{struct_workout}{Workout}} \&w)
+\begin{DoxyCompactList}\small\item\em Overloaded insertion operator to output \doxylink{struct_workout}{Workout} object. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{workout_8cpp_ad9d2464f6e8c2fe313d79231e1831240}{operator$<$$<$}} (std\+::ostream \&os, const std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work)
+\begin{DoxyCompactList}\small\item\em Overloaded insertion operator to output \doxylink{struct_workout}{Workout} vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{workout_8cpp_a4a3e8cf7e60984a2228183ee45d81ba6}{get\+Workouts}} (std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&work, int32\+\_\+t \&us\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Create and get input for \doxylink{struct_workout}{Workout} objects. from the user and push them into a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{workout_8cpp_a4a3e8cf7e60984a2228183ee45d81ba6}\label{workout_8cpp_a4a3e8cf7e60984a2228183ee45d81ba6} 
+\index{workout.cpp@{workout.cpp}!getWorkouts@{getWorkouts}}
+\index{getWorkouts@{getWorkouts}!workout.cpp@{workout.cpp}}
+\doxysubsubsection{\texorpdfstring{getWorkouts()}{getWorkouts()}}
+{\footnotesize\ttfamily void get\+Workouts (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{w,  }\item[{int32\+\_\+t \&}]{us\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Create and get input for \doxylink{struct_workout}{Workout} objects. from the user and push them into a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Reference to the vector where the \doxylink{struct_workout}{Workout} objects will be stored. \\
+\hline
+{\em us\+\_\+id} & Current user\textquotesingle{}s id \\
+\hline
+\end{DoxyParams}
+\Hypertarget{workout_8cpp_ad9d2464f6e8c2fe313d79231e1831240}\label{workout_8cpp_ad9d2464f6e8c2fe313d79231e1831240} 
+\index{workout.cpp@{workout.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!workout.cpp@{workout.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_workout}{Workout}} $>$ \&}]{work }\end{DoxyParamCaption})}
+
+
+
+Overloaded insertion operator to output \doxylink{struct_workout}{Workout} vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to write the \doxylink{struct_workout}{Workout} vector to. \\
+\hline
+{\em work} & The \doxylink{struct_workout}{Workout} vector to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream after writing the \doxylink{struct_workout}{Workout} vector. 
+\end{DoxyReturn}
+\Hypertarget{workout_8cpp_a96982777031f8050901e2c34a954c277}\label{workout_8cpp_a96982777031f8050901e2c34a954c277} 
+\index{workout.cpp@{workout.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!workout.cpp@{workout.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{struct_workout}{Workout}} \&}]{w }\end{DoxyParamCaption})}
+
+
+
+Overloaded insertion operator to output \doxylink{struct_workout}{Workout} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to write the \doxylink{struct_workout}{Workout} object to. \\
+\hline
+{\em w} & The \doxylink{struct_workout}{Workout} object to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream after writing the \doxylink{struct_workout}{Workout} object. 
+\end{DoxyReturn}
